@@ -1,0 +1,99 @@
+{
+    "pagination": {
+        "size": 10,
+        "page": 1
+    }, 
+    "result": [
+        {
+            "id": 1,
+            "login": "l-ipsumdolor",
+            "name": "Lorem",
+            "surname": "Ipsum Dolor",
+            "email": "l-ipsumdolor@correosexpress.com",
+            "active": 1,
+            "lockedDate": null
+        },
+        {
+            "id": 2,
+            "login": "s-ametconsectetur",
+            "name": "Sit",
+            "surname": "Amet Consectetur",
+            "email": "l-ipsumdolor@correosexpress.com",
+            "active": 1,
+            "lockedDate": null
+        },
+        {
+            "id": 3,
+            "login": "s-ametconsectetur-2",
+            "name": "Sit",
+            "surname": "Amet Consectetur",
+            "email": "l-ipsumdolor@correosexpress.com",
+            "active": 1,
+            "lockedDate": null
+        },
+        {
+            "id": 4,
+            "login": "s-ametconsectetur-4",
+            "name": "Sit",
+            "surname": "Amet Consectetur",
+            "email": "l-ipsumdolor@correosexpress.com",
+            "active": 1,
+            "lockedDate": null
+        },
+        {
+            "id": 5,
+            "login": "s-ametconsectetur-5",
+            "name": "Sit",
+            "surname": "Amet Consectetur",
+            "email": "l-ipsumdolor@correosexpress.com",
+            "active": 1,
+            "lockedDate": null
+        },
+        {
+            "id": 6,
+            "login": "s-ametconsectetur-6",
+            "name": "Sit",
+            "surname": "Amet Consectetur",
+            "email": "l-ipsumdolor@correosexpress.com",
+            "active": 1,
+            "lockedDate": null
+        },
+        {
+            "id": 7,
+            "login": "s-ametconsectetur-7",
+            "name": "Sit",
+            "surname": "Amet Consectetur",
+            "email": "l-ipsumdolor@correosexpress.com",
+            "active": 1,
+            "lockedDate": null
+        },
+        {
+            "id": 8,
+            "login": "s-ametconsectetur-8",
+            "name": "Sit",
+            "surname": "Amet Consectetur",
+            "email": "l-ipsumdolor@correosexpress.com",
+            "active": 1,
+            "lockedDate": null
+        },
+        {
+            "id": 9,
+            "login": "s-ametconsectetur-9",
+            "name": "Sit",
+            "surname": "Amet Consectetur",
+            "email": "l-ipsumdolor@correosexpress.com",
+            "active": 1,
+            "lockedDate": null
+        },
+        {
+            "id": 10,
+            "login": "s-ametconsectetur-10",
+            "name": "Sit",
+            "surname": "Amet Consectetur",
+            "email": "l-ipsumdolor@correosexpress.com",
+            "active": 0,
+            "lockedDate": "2000-10-31T01:30:00.000+00:00"
+        }
+    ],
+    "total": 58
+}

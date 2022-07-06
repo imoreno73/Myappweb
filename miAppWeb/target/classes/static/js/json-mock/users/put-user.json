@@ -1,0 +1,69 @@
+{
+	"id": 2,
+    "login": "s-ametconsectetur",
+    "name": "Sit",
+    "surname": "Amet Consectetur",
+    "email": "l-ipsumdolor@correosexpress.com",
+    "active": 0,
+    "lockedDate": "2000-10-31T01:30:00.000+00:00",
+    "roles": [
+    	{
+    		"id": 1,
+    		"name": "Administrador",
+			"functionalGroup": {
+				"id": 1,
+				"name": "ADT"
+			}
+    	},
+    	{
+    		"id": 2,
+    		"name": "Arquitectura",
+			"functionalGroup": {
+				"id": 1,
+				"name": "ADT"
+			}
+    	},
+    	{
+    		"id": 3,
+    		"name": "Editor",
+			"functionalGroup": {
+				"id": 1,
+				"name": "ADT"
+			}
+    	},
+    	{
+    		"id": 4,
+    		"name": "Conductor",
+			"functionalGroup": {
+				"id": 1,
+				"name": "ADT"
+			}
+    	},
+    	{
+    		"id": 5,
+    		"name": "Publicador",
+			"functionalGroup": {
+				"id": 1,
+				"name": "ADT"
+			}
+    	},
+    	{
+    		"id": 6,
+    		"name": "Validador",
+			"functionalGroup": {
+				"id": 1,
+				"name": "ADT"
+			}
+    	}
+    ],
+    "functionalGroups": [{
+         "id": 1,
+         "name": "UX",
+         "slug": "ux"
+      },
+{
+         "id": 2,
+         "name": "ARQUITECTURA",
+         "slug": "arquitectura"
+      }]
+}

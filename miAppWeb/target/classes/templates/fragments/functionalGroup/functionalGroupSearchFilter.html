@@ -1,0 +1,28 @@
+<form id="formFunctionalGroupSearch" name="formFunctionalGroupSearch"
+	th:action="@{/functionalGroups}" method="get"
+	th:object="${formFunctionalGroupSearch}">
+
+	<!-- =====Row 1===== -->
+	<div class="row align-items-center">
+		<div class="form-group col-12 col-sm-6 col-lg-4 my-1 px-3 mb-4">
+			<label for="name" th:text="#{view.functional.group.form.name}"></label> 
+			<input
+				type="text" 
+				class="form-control" 
+				th:field="*{name}"
+				th:placeholder="#{view.functional.group.form.name.placeholder}">
+		</div>
+	</div>
+
+	<div class="row mt-6 mb-6">
+		<div class="d-flex col-12 my-1 align-items-center pe-lg-5">
+			<input data-action="reset" type="reset"
+				class="btn btn-outline-primary ms-auto me-4"
+				th:value="#{view.general.button.reset}">
+			<button type="submit" class="btn btn-primary">
+				<th:block th:text="#{view.general.button.search}"></th:block>
+			</button>
+		</div>
+	</div>
+
+</form>

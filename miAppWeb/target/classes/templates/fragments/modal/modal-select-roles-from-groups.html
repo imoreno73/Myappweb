@@ -1,0 +1,40 @@
+<div class="modal fade modalSelectRolesFromGroups h-100" tabindex="-1" role="dialog" aria-hidden="true">
+	<form id="select-group-and-roles-form">
+		<div class="modal-dialog">
+	    	<div class="modal-content">
+				<div class="modal-header">
+	                                <h4 class="modal-title" th:text="#{view.modal.select.roles.de.grupos.title}"></h4>
+	                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+	                                </button>                                                        
+				</div>
+				<div class="modal-body">
+		            <fieldset>
+		            	<div class="row">
+							
+							<div class="form-group col-12 col-sm-12 col-lg-12 my-1 px-3 mb-4">
+								
+								<label class="control-label blue" for="roleId"
+								th:text="#{view.modal.select.roles.de.grupos.label}"></label>
+								<select class="form-control selectpicker" 
+										multiple
+										data-live-search="true"
+										data-size="10"
+									    th:title="#{view.modal.select.roles.de.grupos.placeholder}" 
+									    id="modalSelectRolesFromGroupsRoleId">
+                                                                            <option th:each="rol : ${userRoles}"
+                                                                                    th:value="${rol.id}"
+                                                                                    th:text="${rol.functionalGroup.name + ' - ' + rol.name}">[user roles]</option>
+								  </select>
+							</div>
+							
+		            	</div>
+		            	
+		            </fieldset>
+				</div>
+				<div class="modal-footer d-flex">
+					<button type="submit" class="btn btn-primary" th:text="#{view.modal.import.selected.button}"></button>
+				</div>
+	    	</div>
+		</div>
+      </form>
+</div>

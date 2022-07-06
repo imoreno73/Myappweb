@@ -1,0 +1,14 @@
+<div th:fragment="default">
+	<div th:if="*{errors}" class="alert alert-primary alert-dismissible"
+		role="alert">
+		<h5 class="alert-heading d-flex align-items-center">
+			<span class="material-icons text-primary">error</span> <span
+				th:text="#{view.general.form.errors}" class="text-primary ms-3"></span>
+		</h5>
+		<ul class="list-unstyled ps-7">
+			<li class="d-flex align-items-center" th:each="error : *{errors}"><span
+				class="material-icons text-primary">clear</span> <span class="ms-2"
+				th:text="#{${error}}">[Form errors]</span></li>
+		</ul>
+	</div>
+</div>

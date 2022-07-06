@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
+encoding//src/main/resources=UTF-8
+encoding//src/main/resources/messages_en.properties=UTF-8
+encoding//src/main/resources/messages_es.properties=UTF-8
+encoding//src/main/resources/messages_pt.properties=UTF-8
+encoding//src/main/resources/static/js/json-mock/users/delete-user.json=UTF-8
+encoding//src/main/resources/static/js/json-mock/users/get-user.json=UTF-8
+encoding//src/main/resources/static/js/json-mock/users/post-user.json=UTF-8
+encoding//src/main/resources/static/js/json-mock/users/put-user.json=UTF-8
+encoding//src/test/java=UTF-8
+encoding//src/test/resources=UTF-8
+encoding/<project>=UTF-8

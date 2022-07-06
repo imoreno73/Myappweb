@@ -1,0 +1,20 @@
+{
+	"id": 2,
+	"slug": {
+		"pt": "dashboard-pt",
+		"es": "dashboard"
+	},
+	"name": {
+		"pt": "(PT) Dashboard",
+		"es": "Dashboard"
+	},
+	"parent": 1,
+	"urlIframe": "http://local.correosexpress.com:8081/webAppDashboardIntranet/pages",
+	"roles": [{
+		"id": 1,
+		"name": "ADT"
+	}, {
+		"id": 2,
+		"name": "Web"
+	}]
+}

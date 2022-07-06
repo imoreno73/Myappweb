@@ -1,0 +1,22 @@
+<div class="col-12 mb-7 d-flex align-items-center">
+	<a class="d-flex align-items-center ms-auto" th:href="@{/roles/new}">
+		<span class="material-icons me-2">group_add</span>
+		<span class="text-secondary" th:text="#{view.role.search.button.new}"></span> 
+	</a>
+</div>
+<div class="col-12">
+	<table id="roleListTable"
+		class="hover w-100 table dt-responsive nowrap">
+		<thead>
+			<tr>
+				<th th:text="#{view.role.search.name}"></th>
+				<th th:text="#{view.role.search.functional.group}"></th>
+				<th th:text="#{view.role.search.control.total.menu}"></th>
+				<th th:text="#{view.role.search.active}"></th>
+				<th th:text="#{view.role.search.locked.date}"></th>
+				<th></th>
+			</tr>
+		</thead>
+	    <input type="hidden" id="languageTable" th:value="${#locale}"/>
+	</table>
+</div>

@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-md mb-7" id="menuApp">
+	<button class="navbar-toggler collapsed text-left w-100 rounded-0 text-white px-4 py-4 align-items-center d-flex" type="button" data-bs-toggle="collapse"
+		data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+		aria-expanded="false" aria-label="Toggle navigation">
+		<span class="material-icons text-white me-4">list</span>
+		<span th:text="#{view.menu.title}"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		<th:block th:unless="${#lists.isEmpty(cexMenu)}" th:remove="tag">
+			<ul class="navbar-nav">
+				<li class="nav-item me-3">
+						<a class="nav-item nav-link d-flex align-items-center" th:href="@{/}">
+						<span class="material-icons">home</span>
+						<span class="ms-2" th:text="#{view.menu.home}"></span>
+						</a>
+				</li>
+				<th:block th:each="level1 : ${cexMenu}" th:remove="tag">
+					<li class="nav-item me-3" th:if="${#lists.isEmpty(level1.items)}">
+						<a class="nav-item nav-link d-flex align-items-center" th:href="@{${level1.link}}">
+						<span class="material-icons" th:text="${level1.icon}"></span>
+						<span class="ms-2" th:text="${level1.name}"></span>
+						</a>
+					</li>
+					<li class="nav-item dropdown me-3"
+						th:unless="${#lists.isEmpty(level1.items)}">
+						<a th:id="'navdrop'+${level1.icon}" href="#"
+						class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">
+						<span class="material-icons" th:text="${level1.icon}"></span>
+						<span class="ms-2" th:text="${level1.name}"></span>						 
+						</a>
+						<ul class="dropdown-menu" th:attr="aria-labelledby='navdrop'+${level1.icon}"
+							th:unless="${#lists.isEmpty(level1.items)}">
+							<th:block th:each="level2 : ${level1.items}" th:remove="tag">
+								<a th:href="@{${level2.link}}" class="dropdown-item">
+									<span th:text="${level2.name}"></span>
+								</a>
+							</th:block>
+						</ul></li>
+				</th:block>
+			</ul>
+		</th:block>
+	</div>	
+	<div id="ampliar" class="position-absolute" >					
+		<button type="button" class="btn bg-transparent d-flex align-items-center w-auto h-auto" data-action="ampliar">
+			<span class="material-icons">fullscreen</span>
+			<span class="m-0 ms-2" th:text="#{view.home.ampliar}"></span>
+		</button>					
+	</div>
+</nav>

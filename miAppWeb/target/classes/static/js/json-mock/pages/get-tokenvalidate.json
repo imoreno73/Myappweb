@@ -1,0 +1,19 @@
+{
+  "status": "SUCCESS",
+  "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmLWJsYW5jb2dvbnphbGV6Iiwicm9sZXMiOiJBRE1JTklTVFJBRE9SLEFSUVVJVEVDVFVSQSIsImlzcyI6InN0cmluZyIsImJ1c2luZXNzTmFtZSI6InN0cmluZyIsImV4cCI6MTYzNzc2NzMyNiwiaWF0IjoxNjM3NzM4NTI2LCJqdGkiOiJjMzk5MzEzZTQ0MjE0N2YxYTQyYzFlN2MwZTBhNGVlOSJ9.qlK5Nz9965gIqh_spUpW0bgOH_EkROlHrF6o180UQSXNxhxZZ1sKQya20y2qx1g2o5YzwacEvS2r1tagjXc3lA",
+  "jws":  {
+	"header": {
+	  "alg": "AES",
+	  "typ": 2
+	},
+	"body": {
+	  "iat": 100,
+	  "iss": "https://clientes.correosexpress.com",
+	  "sub": "f-blancogonzalez",
+	  "roles": "ADMINISTRADOR,ARQUITECTURA",
+	  "exp"	: 28800,
+	  "jti": ""
+	},
+	"signature": "aaaaaaaaaaaaaaaaaaaaa"
+  }
+}

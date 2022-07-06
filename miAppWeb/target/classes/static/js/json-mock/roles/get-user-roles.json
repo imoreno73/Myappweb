@@ -1,0 +1,122 @@
+[
+        {
+            "id": 1,
+            "name": "Role-1",
+    		"slug": "adt-role-1",
+			"functionalGroup": {
+				"id": 1,
+				"name": "ADT"
+			},
+		    "controlTotalMenu": 1,
+		    "active": 1,
+		    "lockedDate": null
+        },
+        {
+            "id": 2,
+            "name": "Role-2",
+    		"slug": "adt-role-2",
+			"functionalGroup": {
+				"id": 1,
+				"name": "ADT"
+			},
+		    "controlTotalMenu": 1,
+		    "active": 1,
+		    "lockedDate": null
+        },
+        {
+            "id": 3,
+            "name": "Role-3",
+    		"slug": "adt-role-3",
+			"functionalGroup": {
+				"id": 1,
+				"name": "ADT"
+			},
+		    "controlTotalMenu": 1,
+		    "active": 1,
+		    "lockedDate": null
+        },
+        {
+            "id": 4,
+            "name": "Role-4",
+    		"slug": "adt-role-4",
+			"functionalGroup": {
+				"id": 1,
+				"name": "ADT"
+			},
+		    "controlTotalMenu": 1,
+		    "active": 1,
+		    "lockedDate": null
+        },
+        {
+            "id": 5,
+            "name": "Role-5",
+    		"slug": "adt-role-5",
+			"functionalGroup": {
+				"id": 1,
+				"name": "ADT"
+			},
+		    "controlTotalMenu": 1,
+		    "active": 1,
+		    "lockedDate": null
+        },
+        {
+            "id": 6,
+            "name": "Role-6",
+    		"slug": "adt-role-6",
+			"functionalGroup": {
+				"id": 1,
+				"name": "ADT"
+			},
+		    "controlTotalMenu": 1,
+		    "active": 1,
+		    "lockedDate": null
+        },
+        {
+            "id": 7,
+            "name": "Role-7",
+    		"slug": "adt-role-7",
+			"functionalGroup": {
+				"id": 1,
+				"name": "ADT"
+			},
+		    "controlTotalMenu": 1,
+		    "active": 1,
+		    "lockedDate": null
+        },
+        {
+            "id": 8,
+            "name": "Role-8",
+    		"slug": "adt-role-8",
+			"functionalGroup": {
+				"id": 1,
+				"name": "ADT"
+			},
+		    "controlTotalMenu": 1,
+		    "active": 1,
+		    "lockedDate": null
+        },
+        {
+            "id": 9,
+            "name": "Role-9",
+    		"slug": "adt-role-9",
+			"functionalGroup": {
+				"id": 1,
+				"name": "ADT"
+			},
+		    "controlTotalMenu": 1,
+		    "active": 1,
+		    "lockedDate": null
+        },
+        {
+            "id": 10,
+            "name": "Role-10",
+    		"slug": "adt-role-10",
+			"functionalGroup": {
+				"id": 1,
+				"name": "ADT"
+			},
+		    "controlTotalMenu": 1,
+		    "active": 1,
+		    "lockedDate": null
+        }
+]

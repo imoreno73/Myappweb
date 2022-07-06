@@ -1,0 +1,13 @@
+<!-- external dataTable css -->
+<link rel="stylesheet" th:href="${@environment.getProperty('cex.cdn.host') + '/css/DataTables/datatables.min.css'}">
+<link rel="stylesheet" th:href="${@environment.getProperty('cex.cdn.host') + '/css/DataTables/Datatables/dataTables.bootstrap.min.css'}">
+<link rel="stylesheet" th:href="${@environment.getProperty('cex.cdn.host') + '/css/DataTables/Responsive/responsive.bootstrap.min.css'}">
+
+<!-- external DataTable scripts -->
+<script type="text/javascript" th:src="${@environment.getProperty('cex.cdn.host') + '/js/DataTables/datatables.min.js'}"></script>
+<script type="text/javascript" th:src="${@environment.getProperty('cex.cdn.host') + '/js/DataTables/Datatables/dataTables.bootstrap.min.js'}"></script>
+<script type="text/javascript" th:src="${@environment.getProperty('cex.cdn.host') + '/js/DataTables/Responsive/dataTables.responsive.min.js'}"></script>
+<script type="text/javascript" th:src="${@environment.getProperty('cex.cdn.host') + '/js/DataTables/Responsive/responsive.bootstrap.min.js'}"></script>
+
+<!-- APP DataTable scripts-->
+<script type="text/javascript" th:src="@{'/js/components/appDatatables.js'}"></script>

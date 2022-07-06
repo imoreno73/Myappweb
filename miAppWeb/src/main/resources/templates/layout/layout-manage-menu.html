@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	th:attr="lang=${#locale}">
+
+<head>
+	<th:block th:insert="fragments/head/head :: default">[Head default]</th:block>
+	<th:block th:insert="fragments/head/head :: jstree">[Head jstree]</th:block>
+	<th:block th:insert="fragments/head/head :: notification">[Head notification]</th:block>
+	<th:block th:insert="fragments/head/head :: form">[Head Form]</th:block>
+	<th:block th:insert="fragments/head/head :: app">[Head app]</th:block>
+</head>
+
+<body class="overflow-y-auto">
+	<div th:replace="fragments/headers/header">[Cabecera]</div>
+	<div th:replace="fragments/headers/notification">[header notification]</div>
+	<div class="container-fluid px-6 px-md-11 py-10">
+		<div class="row">
+	    	<nav th:replace="fragments/menu/navbar-menu">[Menu]</nav>	
+	    	<input type="hidden" id="languageTable" th:value="${#locale}"/>
+	    	<input type="hidden" id= "page-max-size" th:value="${@environment.getProperty('general.page.size.max')}" />
+	    </div>
+		<div layout:fragment="content">[Content]</div>
+	</div>
+	<div th:replace="fragments/modal/modal-delete">[Modal delete]</div>
+	<div th:replace="fragments/footers/footer">[Pie]</div>	
+</body>
+</html>

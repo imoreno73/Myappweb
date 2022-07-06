@@ -1,0 +1,129 @@
+{
+    "pagination": {
+        "size": 10,
+        "page": 1
+    },
+    "result": [
+        {
+            "id": 1,
+		    "name": "Rol 1",
+    		"slug": "adt-role-1",
+		    "functionalGroup": {
+		    	"id": 1,
+		    	"name": "ADT"
+		    },
+		    "controlTotalMenu": 0,
+		    "active": 0,
+		    "lockedDate": "2000-10-31T01:30:00.000+00:00"
+        },
+        {
+            "id": 2,
+		    "name": "Rol 2",
+    		"slug": "adt-role-2",
+		    "functionalGroup": {
+		    	"id": 1,
+		    	"name": "ADT"
+		    },
+		    "controlTotalMenu": 1,
+		    "active": 1,
+		    "lockedDate": null
+        },
+        {
+            "id": 3,
+		    "name": "Rol 3",
+    		"slug": "adt-role-3",
+		    "functionalGroup": {
+		    	"id": 1,
+		    	"name": "ADT"
+		    },
+		    "controlTotalMenu": 0,
+		    "active": 0,
+		    "lockedDate": "2000-10-31T01:30:00.000+00:00"
+        },
+        {
+            "id": 4,
+		    "name": "Rol 4",
+    		"slug": "adt-role-4",
+		    "functionalGroup": {
+		    	"id": 1,
+		    	"name": "ADT"
+		    },
+		    "controlTotalMenu": 0,
+		    "active": 0,
+		    "lockedDate": "2000-10-31T01:30:00.000+00:00"
+        },
+        {
+            "id": 5,
+		    "name": "Rol 5",
+    		"slug": "adt-role-5",
+		    "functionalGroup": {
+		    	"id": 1,
+		    	"name": "ADT"
+		    },
+		    "controlTotalMenu": 0,
+		    "active": 0,
+		    "lockedDate": "2000-10-31T01:30:00.000+00:00"
+        },
+        {
+            "id": 6,
+		    "name": "Rol 6",
+    		"slug": "adt-role-6",
+		    "functionalGroup": {
+		    	"id": 1,
+		    	"name": "ADT"
+		    },
+		    "controlTotalMenu": 0,
+		    "active": 0,
+		    "lockedDate": "2000-10-31T01:30:00.000+00:00"
+        },
+        {
+           "id": 7,
+		    "name": "Rol 7",
+    		"slug": "adt-role-7",
+		    "functionalGroup": {
+		    	"id": 1,
+		    	"name": "ADT"
+		    },
+		    "controlTotalMenu": 0,
+		    "active": 0,
+		    "lockedDate": "2000-10-31T01:30:00.000+00:00"
+        },
+        {
+            "id": 8,
+		    "name": "Rol 8",
+    		"slug": "adt-role-8",
+		    "functionalGroup": {
+		    	"id": 1,
+		    	"name": "ADT"
+		    },
+		    "controlTotalMenu": 0,
+		    "active": 0,
+		    "lockedDate": "2000-10-31T01:30:00.000+00:00"
+        },
+        {
+            "id": 9,
+		    "name": "Rol 9",
+    		"slug": "adt-role-9",
+		    "functionalGroup": {
+		    	"id": 1,
+		    	"name": "ADT"
+		    },
+		    "controlTotalMenu": 0,
+		    "active": 0,
+		    "lockedDate": "2000-10-31T01:30:00.000+00:00"
+        },
+        {
+            "id": 10,
+		    "name": "Rol 10",
+    		"slug": "adt-role-10",
+		    "functionalGroup": {
+		    	"id": 1,
+		    	"name": "ADT"
+		    },
+		    "controlTotalMenu": 0,
+		    "active": 1,
+		    "lockedDate": null
+        }
+    ],
+    "total": 58
+}

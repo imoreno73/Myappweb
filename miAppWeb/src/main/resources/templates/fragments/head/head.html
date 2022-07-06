@@ -1,0 +1,38 @@
+<head th:fragment="default" th:remove="tag">
+
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="shortcut icon" type="image/x-icon" th:href="${@environment.getProperty('cex.cdn.host') + '/images/'+session.webAppTheme+'/favicon.png'}">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title th:text="${headTitle}"></title>
+
+<!--JS Jquery | Popper | Bootstrap-->
+<script type="text/javascript" th:src="${@environment.getProperty('cex.cdn.host') + '/js/jquery-3.5.1.min.js'}"></script>
+<script type="text/javascript" th:src="${@environment.getProperty('cex.cdn.host') + '/js/moment-with-locales.js'}"></script>
+<script type="text/javascript" th:src="${@environment.getProperty('cex.cdn.host') + '/js/bootstrap/bootstrap.bundle.min.js'}"></script>
+
+</head>
+
+<head th:fragment="datatable" th:remove="tag">
+	<th:block th:insert="fragments/head/components/headDatatables"></th:block>
+</head>
+
+<head th:fragment="form" th:remove="tag">
+	<th:block th:insert="fragments/head/components/headForm"></th:block>
+</head>
+
+<head th:fragment="notification" th:remove="tag">
+	<th:block th:insert="fragments/head/components/headNotification"></th:block>
+</head>
+
+<head th:fragment="scrollingTabs" th:remove="tag">
+	<th:block th:insert="fragments/head/components/headScrollingTabs"></th:block>
+</head>
+
+<head th:fragment="jstree" th:remove="tag">
+	<th:block th:insert="fragments/head/components/headJstree"></th:block>
+</head>
+
+<head th:fragment="app" th:remove="tag">
+	<th:block th:insert="fragments/head/components/headApp"></th:block>
+</head>

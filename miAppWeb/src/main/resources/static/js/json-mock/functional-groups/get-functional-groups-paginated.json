@@ -1,0 +1,59 @@
+{
+	"pagination": {
+		"size": 10,
+		"page": 1
+	},
+	"result": [
+		{
+			"id": 1,
+			"name": "ADT",
+			"slug": "adt"
+		},
+		{
+			"id": 2,
+			"name": "Web pública",
+			"slug": "web-publica"
+		},
+		{
+			"id": 3,
+			"name": "Clasificadores",
+			"slug": "clasificadores"
+		},
+		{
+			"id": 4,
+			"name": "Babel",
+			"slug": "babel"
+		},
+		{
+			"id": 5,
+			"name": "Web privada",
+			"slug": "web-privada"
+		},
+		{
+			"id": 6,
+			"name": "Web",
+			"slug": "web"
+		},
+		{
+			"id": 7,
+			"name": "Web",
+			"slug": "web"
+		},
+		{
+			"id": 8,
+			"name": "Web",
+			"slug": "web"
+		},
+		{
+			"id": 9,
+			"name": "Web",
+			"slug": "web"
+		},
+		{
+			"id": 10,
+			"name": "Web",
+			"slug": "web"
+		}
+	],
+	"total": 58
+}

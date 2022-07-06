@@ -1,0 +1,129 @@
+		<div class="row mb-7">
+			<div class="col-12 d-flex align-items-center">
+				<h2 th:text="#{view.page.detail.title}"></h2>
+				<button data-action="goToPrevPage" data-toggle="tooltip" data-placement="top" th:title="#{view.general.link.back}" th:attr="data-link=@{/users}" class="backButton ms-auto btn bg-transparent d-flex align-items-center w-auto h-auto">
+					<span class="material-icons">arrow_back</span>
+					<span class="m-0 ms-2" th:text="#{view.general.link.back}"></span>
+				</button>
+			</div>			
+		</div>
+		
+		<div class="row min-vhh-65 pt-6">
+            <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mb-sm-7">                
+                <section class="panel">
+                    <header class="panel-heading d-flex align-items-center">                                                
+                        <input id="treeBasic_search" type="text" class="form-control" th:placeholder="#{view.page.search.name.placeholder}" autocomplete="off">
+						<!-- a href="#" data-action="showEditPage" data-toggle="tooltip" data-placement="top" th:title="#{view.page.search.button.show}" class="ms-3 d-flex align-items-center"><span class="material-icons">ballot</span></a-->
+						<a href="#" data-action="addParent" data-toggle="tooltip" data-placement="top" th:title="#{view.page.search.button.add.parent}" class="mx-3 d-flex align-items-center"><span class="material-icons">note_add</span></a>
+						<a href="#" data-action="addChildren" data-toggle="tooltip" data-placement="top" th:title="#{view.page.search.button.add.child}" class="d-flex align-items-center"><span class="material-icons">post_add</span></a>
+                    </header>
+                    <div class="panel-body min-vhh-35 max-vhh-150">
+                        <div id="treeBasic" aria-multiselectable="false" th:attr="data-url=@{/pages/list}"></div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-12 col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-9 col-xxl-10 ps-sm-5 ps-md-8 ps-lg-10">
+            	<th:block th:insert="fragments/error/errorAjax :: default">[Ajax error default]</th:block>
+				<form id="formPage" 
+						th:action="@{/pages}"
+						class="d-none needs-validation"
+						novalidate
+						th:attr="data-context=@{/}">
+					<input type="hidden" class="disabled" id="orden" name="orden">
+					<div class="row">
+						<div id="parentPage" class="form-group d-flex align-items-center mb-6 px-3 col-12">
+							<label class="mb-0 me-5" th:text="#{view.page.form.parent}"></label>
+							<input type="text" class="form-control w-auto mw-auto border-0 disabled text-secondary" id="nameParent" disabled="disabled" name="nameParent">									
+							<input type="hidden" class="disabled" id="idParent" name="idParent">									
+							<input type="hidden" class="disabled" id="id" name="id">
+						</div>
+					</div>
+					<th:block th:each="key : ${cexLocales.keySet()}">
+						<fieldset class="row mb-7">							
+							<div class="col-12">
+							<legend th:text="${cexLocales.get(key)}"></legend>
+							<div class="card card-without-head">
+							<div class="card-body mt-0">								
+								<div class="row">
+									<div class="form-group mb-6 px-3 col-12 col-xxl-6">
+										<label class="control-label blue" th:for="${'name.translate.' + key}" th:text="#{view.page.form.name}"></label>
+										<input required type="text" class="form-control" th:placeholder="#{view.page.form.name.placeholder}" th:name="${'name.translate.' + key}" value="">
+										<div class="invalid-feedback" th:text="#{view.page.error.name.empty}"></div>
+									</div>
+									<div class="form-group mb-6 px-3 col-12 col-xxl-6">
+										<label class="control-label blue d-block w-100" th:for="${'slug.translate.' + key}" th:text="#{view.page.form.slug}"></label>
+										<div class="d-flex align-items-center">
+											<small class="d-inline-block text-truncate me-3" data-toggle="tooltip" th:title="${@environment.getProperty('cex.intranet.host')}" th:text="${@environment.getProperty('cex.intranet.host')}"></small>
+											<input type="text" class="form-control d-inline-block w-100 w-lg-25" th:placeholder="#{view.page.form.slug.placeholder}" th:name="${'slug.translate.' + key}">
+										</div>
+									</div>
+								</div>								
+							</div>
+							</div>
+							</div>
+						</fieldset>
+					</th:block>
+					<hr class="section-spacer w-50 mx-auto dashed border-light">
+					<fieldset class="row mb-7">							
+							<div class="col-12">
+								<legend th:text="#{view.page.form.fieldset.comun.title}"></legend>
+								<div class="card card-without-head">
+									<div class="card-body mt-0">
+										<div class="row">						
+											<div class="form-group mb-6 px-3 col-12 col-xxl-6">
+												<label for="roles" th:text="#{view.page.form.roles}"></label>
+														<select 
+																	multiple
+																	required
+																	class="form-control selectpicker" 
+																	data-live-search="true"
+																	data-size="10"
+																	name="roles"
+															    	id="roles"
+																	th:title="#{view.page.form.roles.placeholder}">
+																  <option 
+															    	th:each="role : ${pageRoles}"
+															    	th:value="${role.id}" 
+															    	th:text="${role.functionalGroup.name + ' - ' + role.name}">[page roles]</option>
+														</select>
+														<div class="invalid-feedback" th:text="#{view.page.error.roles.empty}"></div>
+																
+												</div>   
+											<div class="form-group mb-6 px-3 col-12 col-xxl-6">
+												<label class="control-label blue d-block w-100" for="urlIframe" th:text="#{view.page.form.iframe}"></label>
+												<input type="url" class="form-control d-inline-block w-100" id="urlIframe" th:placeholder="${@environment.getProperty('cex.intranet.host')}" name="urlIframe">
+												<div class="invalid-feedback" th:text="#{view.page.error.iframe.format}"></div>
+											</div>
+											<div class="form-group form-switch mb-6 px-3 col-12 col-xxl-6">																						
+												<div class="form-check form-switch">
+												  <input class="form-check-input" type="checkbox" role="switch" id="navTab" name="navTab"  th:checked="${navTab}">
+												  <label class="form-check-label" for="navTab" th:text="#{view.page.form.navtab}"></label>
+												</div>
+											</div>
+											
+										</div>
+									</div>  
+								</div>
+							</div>					           				
+					</fieldset>	
+					<div class="row">	
+					<div class="form-group mb-6 px-3 d-flex align-items-center col-12">
+						<button data-action="delete" 
+								class="btn btn-primary me-5 d-none" 
+								th:text="#{view.page.search.button.delete}"
+								data-id=""
+								data-url=""
+								data-callback="updateMenuTree"
+								data-bs-toggle="modal"
+								data-bs-target=".modalDelete"></button>
+						<button data-action="save" class="btn btn-secondary" th:text="#{view.page.search.button.save}"></button>
+					</div>	
+					</div>			
+				</form>
+				<div id="infoPageEdition" class="py-5">
+					<div class="bg-light rounded border p-5" th:utext="#{view.page.main.description}">
+						
+					</div>
+				</div>
+            </div>
+        </div>

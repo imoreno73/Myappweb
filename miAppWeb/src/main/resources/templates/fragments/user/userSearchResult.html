@@ -1,0 +1,22 @@
+<div class="col-12 mb-7 d-flex align-items-center">
+	<a class="d-flex align-items-center ms-auto" th:href="@{/users/new}">
+		<span class="material-icons me-2">person_add</span>
+		<span class="text-secondary" th:text="#{view.user.search.button.new}"></span> 
+	</a>
+</div>
+<div class="col-12">
+	<table id="userListTable"
+		class="hover w-100 table dt-responsive nowrap">
+		<thead>
+			<tr>
+				<th th:text="#{view.user.search.login}"></th>
+				<th th:text="#{view.user.search.name}"></th>
+				<th th:text="#{view.user.search.surname}"></th>
+				<th th:text="#{view.user.search.email}"></th>
+				<th th:text="#{view.user.search.active}"></th>
+				<th></th>
+			</tr>
+		</thead>
+	    <input type="hidden" id="languageTable" th:value="${#locale}"/>
+	</table>
+</div>

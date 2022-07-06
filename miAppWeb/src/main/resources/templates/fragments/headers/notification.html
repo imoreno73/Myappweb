@@ -1,0 +1,5 @@
+<div th:fragment="notification" th:remove="tag">
+	<span id="notification-header" class="d-none" th:if=${appNotification} th:attr="data-title=${appNotification.title},data-text=${appNotification.text},data-type=${appNotification.type}"></span>
+</div>
+
+

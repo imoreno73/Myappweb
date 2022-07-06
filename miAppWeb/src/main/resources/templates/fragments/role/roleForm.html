@@ -1,0 +1,92 @@
+		<div class="row mb-5">
+			<div class="col-12 d-flex align-items-center">
+				<h2 th:text="${roleFormTitle}"></h2>
+				<button data-action="goToPrevPage" th:attr="data-link=@{/roles}" class="backButton ms-auto btn bg-transparent d-flex align-items-center w-auto h-auto">
+					<span class="material-icons">arrow_back</span>
+					<span class="m-0 ms-2" th:text="#{view.general.link.back}"></span>
+				</button>
+			</div>			
+		</div>
+		<hr class="section-spacer">
+	<div class="row">		
+		<div class="col-12 py-3 mb-7">		
+			<form id="formRole" name="formRole"
+					th:action="@{${formRoleUrl}}" method="post"
+					th:object="${formRole}"
+					class="needs-validation"
+					novalidate>
+					
+				<th:block th:insert="fragments/error/error :: default">[Error default]</th:block>
+				
+				<fieldset>
+					
+					<div class="row">
+					
+						<input type="hidden" th:field=*{id}>
+						
+						<div class="form-group col-12 col-sm-6 col-lg-3 my-1 px-3 mb-7">
+							<label for="name"
+								th:text="#{view.role.form.name}"></label> 
+									<input required type="text" class="form-control"
+										th:field=*{name} th:placeholder="#{view.role.form.name.placeholder}">
+									<div class="invalid-feedback" th:text="#{view.role.error.name.empty}"></div>
+						</div>
+						
+						<div class="form-group col-12 col-sm-6 col-lg-3 my-1 px-3 mb-7">					
+							<label class="control-label blue" for="grupoFuncional"
+								th:text="#{view.role.search.functional.group}"></label>
+								<select class="form-control selectpicker"
+										required
+									    th:title="#{view.role.search.functional.group}" 
+									    th:field="*{functionalGroup}">
+									    <option 
+									    	th:each="functionalGroup : ${functionalGroups}" 
+									    	th:value="${functionalGroup.id}" 
+									    	th:text="${functionalGroup.name}">[Grupo funcional]</option>
+								  </select>
+								  <div class="invalid-feedback" th:text="#{view.role.error.functional.group.empty}"></div>
+							
+						</div>
+						
+						<div class="form-group col-12 col-sm-6 col-lg-3 my-1 px-3 mb-7">
+							<label for="active"
+								th:text="#{view.role.form.active}"></label> 
+									<select 
+										class="form-control selectpicker" 
+										data-size="2"
+										th:field="*{active}"
+										th:title="#{view.role.form.active.placeholder}">
+									  		<option value="0" th:text="#{view.general.no}">[no activo]</option>
+									  		<option value="1" th:text="#{view.general.si}">[activo]</option>
+									</select>
+						</div>
+						
+						<div class="form-group col-12 col-sm-6 col-lg-3 my-1 px-3 mb-7">
+							<label for="controlTotalMenu"
+								th:text="#{view.role.form.control.total.menu}"></label> 
+									<select 
+										class="form-control selectpicker" 
+										data-size="2"
+										th:field="*{controlTotalMenu}"
+										th:title="#{view.role.form.control.total.menu.placeholder}">
+									  		<option value="0" th:text="#{view.general.no}">[no]</option>
+									  		<option value="1" th:text="#{view.general.si}">[si]</option>
+									</select>
+						</div>
+						
+					</div>
+					
+				</fieldset>
+				
+				<div class="row mt-6 mb-6 pe-3">
+					<div class="d-flex col-12 my-1 align-items-center">
+						<button type="submit" class="ms-auto btn btn-primary">
+							<th:block th:text="#{view.general.button.submit}"></th:block>
+						</button>					
+					</div>
+				</div>
+					
+			</form>
+
+		</div>
+	</div>

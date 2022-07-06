@@ -1,0 +1,12 @@
+{
+	"id": 2,
+    "name": "Sit",
+    "slug": "adt-sit",
+	"functionalGroup": {
+		"id": 1,
+		"name": "ADT"
+	},
+	"controlTotalMenu": 1,
+	"active": 1,
+	"lockedDate": null
+}

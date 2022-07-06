@@ -1,0 +1,80 @@
+		<div class="row mb-5">
+			<div class="col-12 d-flex align-items-center">
+				<h2 th:text="#{view.user.detail.title}"></h2>
+				<button data-action="goToPrevPage" data-toggle="tooltip" data-placement="top" th:title="#{view.general.link.back}" th:attr="data-link=@{/users}" class="backButton ms-auto btn bg-transparent d-flex align-items-center w-auto h-auto">
+					<span class="material-icons">arrow_back</span>
+					<span class="m-0 ms-2" th:text="#{view.general.link.back}"></span>
+				</button>
+			</div>			
+		</div>
+		
+		<div class="row rounded py-7 cexBoxLight text-break mx-1">						
+			
+			<div th:if="${userDetail.login != null}" class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+				<h6 class="label-primary" th:text="#{view.user.detail.login}"></h6>
+				<p th:text="${userDetail.login}"></p>
+			</div>
+			
+			<div th:if="${userDetail.name != null}" class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+				<h6 class="label-primary" th:text="#{view.user.detail.name}"></h6>
+				<p th:text="${userDetail.name}"></p>
+			</div>
+			
+			<div th:if="${userDetail.surname != null}" class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+				<h6 class="label-primary" th:text="#{view.user.detail.surname}"></h6>
+				<p th:text="${userDetail.surname}"></p>
+			</div>
+			
+			<div th:if="${userDetail.email != null}" class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+				<h6 class="label-primary" th:text="#{view.user.detail.email}"></h6>
+				<p th:text="${userDetail.email}"></p>
+			</div>
+			
+			<div th:if="${userDetail.active != null}" class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+				<h6 class="label-primary" th:text="#{view.user.detail.active}"></h6>
+				<p th:text="${userDetail.active}"></p>
+			</div>
+			
+			<div th:if="${userDetail.lockedDate != null}" class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+				<h6 class="label-primary" th:text="#{view.user.detail.locked.date}"></h6>
+				<p th:text="${#dateUtils.format(userDetail.lockedDate, 'dd-MM-yyyy HH:mm:ssZ','Europe/Madrid')}"></p>
+			</div>
+			<!--
+			<div th:if="${userDetail.roles != null}" class="col-12 col-lg-12 mt-4">
+				<h6 class="label-primary" th:text="#{view.user.detail.roles}"></h6>
+				<div class="row">
+					<div class="col-6 col-xs-4 col-sm-4 col-lg-4" th:each="role : ${userDetail.roles}" th:text="${role.functionalGroup.name + ' - ' + role.name}">[role]</div>	
+				</div>
+			</div>
+			-->
+		</div>
+<div class="row mt-7">
+    <div class="col-12 col-sm-12 col-md-8 col-lg-8 mb-7">
+        <label th:text="#{view.user.detail.roles}"></label>
+	<table class="hover table dt-responsive nowrap dataTable no-footer dtr-inline" th:if="${userDetail.roles}">
+            <thead>
+                <tr>
+                    <th th:text="#{view.user.detail.name}"></th>
+                    <th th:text="#{view.user.detail.functional.groups}"></th>
+                </tr>
+            </thead>
+            <tr th:each="role : ${userDetail.roles}">
+                <td th:text="${role.name}"></td>
+                <td th:text="${role.functionalGroup.name}"></td>
+            </tr>
+	</table>
+    </div>
+    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+        <label th:text="#{view.user.detail.functional.groups}"></label>
+	<table class="hover table dt-responsive nowrap dataTable no-footer dtr-inline" th:if="${userDetail.functionalGroups}">
+            <thead>
+                <tr>
+                    <th th:text="#{view.user.detail.name}"></th>
+                </tr>
+            </thead>
+            <tr th:each="fg : ${userDetail.functionalGroups}">
+                <td th:text="${fg.name}"></td>
+            </tr>
+	</table>
+    </div>
+</div>

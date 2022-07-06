@@ -1,0 +1,40 @@
+		<div class="row mb-5">
+			<div class="col-12 d-flex align-items-center">
+				<h2 th:text="#{view.role.detail.title}"></h2>
+				<button data-action="goToPrevPage" th:attr="data-link=@{/roles}" class="backButton ms-auto btn bg-transparent d-flex align-items-center w-auto h-auto">
+					<span class="material-icons">arrow_back</span>
+					<span class="m-0 ms-2" th:text="#{view.general.link.back}"></span>
+				</button>
+			</div>			
+		</div>
+		
+		<div class="row rounded py-7 cexBoxLight text-break mx-1">						
+			
+			<div th:if="${roleDetail.name != null}" class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+				<h6 class="label-primary" th:text="#{view.role.detail.name}"></h6>
+				<p th:text="${roleDetail.name}"></p>
+			</div>
+			
+			<div th:if="${roleDetail.functionalGroup != null}" class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+				<h6 class="label-primary" th:text="#{view.role.detail.functional.group}"></h6>
+				<p th:text="${roleDetail.functionalGroup.name}"></p>
+			</div>
+			
+			<div th:if="${roleDetail.controlTotalMenu != null}" class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+				<h6 class="label-primary" th:text="#{view.role.detail.control.total.menu}"></h6>
+				<p th:if="roleDetail.controlTotalMenu" th:text="#{view.general.si}"></p>
+				<p th:unless="roleDetail.controlTotalMenu" th:text="#{view.general.no}"></p>
+			</div>
+			
+			<div th:if="${roleDetail.active != null}" class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+				<h6 class="label-primary" th:text="#{view.role.detail.active}"></h6>
+				<p th:if="roleDetail.active" th:text="#{view.general.si}"></p>
+				<p th:unless="roleDetail.active" th:text="#{view.general.no}"></p>
+			</div>
+			
+			<div th:if="${roleDetail.lockedDate != null}" class="col-12 col-sm-6 col-md-6 col-lg-4 mt-4">
+				<h6 class="label-primary" th:text="#{view.role.detail.locked.date}"></h6>
+				<p th:text="${#dateUtils.format(roleDetail.lockedDate, 'dd-MM-yyyy HH:mm:ssZ','Europe/Madrid')}"></p>
+			</div>
+			
+		</div>

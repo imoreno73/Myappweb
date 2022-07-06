@@ -1,0 +1,113 @@
+--- 
+menu: 
+  es:   
+    - 
+      anonymous: true
+      type: local
+      icon: person
+      link: /users
+      name: "Usuarios"
+      showName: false
+      roles: ~ 
+
+    - 
+      anonymous: true
+      type: local
+      icon: group
+      link: /roles
+      name: "Roles"
+      showName: false
+      roles: ~ 
+
+    - 
+      anonymous: true
+      type: local
+      icon: group_work
+      link: /functionalGroups
+      name: "Grupos"
+      showName: false
+      roles: ~ 
+
+    - 
+      anonymous: true
+      type: local
+      icon: menu
+      link: /pages
+      name: "Páginas"
+      showName: false
+      roles: ~    
+      
+  pt: 
+    - 
+      anonymous: true
+      type: local
+      icon: person
+      link: /users
+      name: "(pt) Usuarios"
+      showName: false
+      roles: ~ 
+
+    - 
+      anonymous: true
+      type: local
+      icon: group
+      link: /roles
+      name: "(pt) Roles"
+      showName: false
+      roles: ~ 
+
+    - 
+      anonymous: true
+      type: local
+      icon: group_work
+      link: /functionalGroups
+      name: "(pt) Grupos"
+      showName: false
+      roles: ~ 
+
+    - 
+      anonymous: true
+      type: local
+      icon: menu
+      link: /pages
+      name: "(pt) Páginas"
+      showName: false
+      roles: ~ 
+      
+  en: 
+    - 
+      anonymous: true
+      type: local
+      icon: person
+      link: /users
+      name: "(en) Usuarios"
+      showName: false
+      roles: ~ 
+
+    - 
+      anonymous: true
+      type: local
+      icon: group
+      link: /roles
+      name: "(en) Roles"
+      showName: false
+      roles: ~ 
+
+    - 
+      anonymous: true
+      type: local
+      icon: group_work
+      link: /functionalGroups
+      name: "(en) Grupos"
+      showName: false
+      roles: ~ 
+
+    - 
+      anonymous: true
+      type: local
+      icon: menu
+      link: /pages
+      name: "(en) Páginas"
+      showName: false
+      roles: ~ 
+      

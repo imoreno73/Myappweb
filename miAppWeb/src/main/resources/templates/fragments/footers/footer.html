@@ -1,0 +1,10 @@
+<div th:fragment="footer" th:remove="tag">
+	<footer id="footer" class="fixed-bottom py-3 bg-light w-100 footerApps d-none" role="contentinfo">
+		<div class="container-fluid">
+			<div class="d-flex align-items-center justify-content-between small">
+				<span class="footer-text" th:text="#{view.footer.copyright.msg}+' '+${#dates.year(#dates.createNow())}"></span>				
+				<span class="footer-text" th:text="#{view.footer.version.msg}"></span>
+			</div>
+		</div>
+	</footer>	
+</div>

@@ -1,0 +1,11 @@
+<div th:fragment="default" th:remove="tag">
+	<div id="error-ajax" class="alert alert-primary alert-dismissible d-none"
+		role="alert">
+		<h5 class="alert-heading d-flex align-items-center">
+			<span class="material-icons text-primary">error</span> <span
+				th:text="#{view.general.form.errors}" class="text-primary ms-3"></span>
+		</h5>
+		<ul class="list-unstyled ps-7">
+		</ul>
+	</div>
+</div>

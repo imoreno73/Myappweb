@@ -1,0 +1,66 @@
+<form id="formRoleSearch" name="formRoleSearch"
+		th:action="@{/roles}" method="get"
+		th:object="${formRoleSearch}">
+		<!-- =====Row 1===== -->
+		<div class="row align-items-center">
+				
+				<div class="form-group col-12 col-sm-6 col-lg-3 mb-5 px-lg-5">
+					<label for="name"
+						th:text="#{view.role.search.name}"></label> 
+						<div class="input-group">
+						<input type="text" class="form-control"
+						th:field=*{name} th:placeholder="#{view.role.search.name}">
+						</div>
+				</div>
+				
+				<div class="form-group col-12 col-sm-6 col-lg-3 mb-5 px-lg-5">					
+						<label class="control-label blue" for="grupoFuncional"
+							th:text="#{view.role.search.functional.group}"></label>
+							<select class="form-control selectpicker"
+								    th:title="#{view.role.search.functional.group}" 
+								    th:field="*{functionalGroup}">
+								    <option value=""></option>
+								    <option 
+								    	th:each="functionalGroup : ${functionalGroups}" 
+								    	th:value="${functionalGroup.id}" 
+								    	th:text="${functionalGroup.name}">[Grupo funcional]</option>
+							  </select>
+						
+				</div>
+
+				<div class="form-group col-12 col-sm-6 col-lg-3 mb-5 px-lg-5">					
+						<label class="control-label blue" for="active"
+							th:text="#{view.role.search.active}"></label>
+							<select class="form-control selectpicker"
+								    th:title="#{view.role.search.active}" 
+								    th:field="*{active}">
+								<option value=""></option>
+							    <option value="0" th:text="#{view.general.no}">[no activo]</option>
+								<option value="1" th:text="#{view.general.si}">[activo]</option>
+							  </select>
+						
+				</div>
+				
+				<div class="form-group col-12 col-sm-6 col-lg-3 mb-5 px-lg-5">					
+						<label class="control-label blue" for="active"
+							th:text="#{view.role.search.control.total.menu}"></label>
+							<select class="form-control selectpicker"
+								    th:title="#{view.role.search.control.total.menu}" 
+								    th:field="*{controlTotalMenu}">
+								    <option value=""></option>
+								    <option value="0" th:text="#{view.general.no}">[no activo]</option>
+									<option value="1" th:text="#{view.general.si}">[activo]</option>
+							  </select>
+						
+				</div>
+				
+		</div>
+			<div class="row mt-6 mb-6">
+				<div class="d-flex col-12 my-1 align-items-center pe-lg-5">
+					<input data-action="reset" type="reset" class="btn btn-outline-primary ms-auto me-4" th:value="#{view.general.button.reset}">
+					<button type="submit" class="btn btn-primary">
+						<th:block th:text="#{view.general.button.search}"></th:block>
+					</button>					
+				</div>
+			</div>
+</form>

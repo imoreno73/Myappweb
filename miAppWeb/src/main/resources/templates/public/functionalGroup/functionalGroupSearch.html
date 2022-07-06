@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	layout:decorate="~{layout/layout-search}">
+<body>
+	<div layout:fragment="content" th:remove="tag">		
+			<div class="row">
+				<div class="col-12 border-bottom py-3 mb-4">
+					<h2 th:text="#{view.functional.group.search.title}"></h2>
+				</div>
+				<div class="col-12 py-3 mb-4">					
+					<div th:replace="fragments/functionalGroup/functionalGroupSearchFilter">[Search Filter]</div>
+				</div>
+				<div th:replace="fragments/functionalGroup/functionalGroupSearchResult">[Search Result]</div>
+			</div>		
+	</div>
+</body>
+</html>

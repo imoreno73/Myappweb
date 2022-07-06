@@ -1,0 +1,171 @@
+<div class="row mb-5">
+			<div class="col-12 d-flex align-items-center">
+				<h2 th:text="${userFormTitle}"></h2>
+				<button data-action="goToPrevPage" data-toggle="tooltip" data-placement="top" th:title="#{view.general.link.back}" th:attr="data-link=@{/users}" class="backButton ms-auto btn bg-transparent d-flex align-items-center w-auto h-auto">
+					<span class="material-icons">arrow_back</span>
+					<span class="m-0 ms-2" th:text="#{view.general.link.back}"></span>
+				</button>
+			</div>			
+</div>
+<hr class="section-spacer">
+<div class="row">		
+		<div class="col-12 py-3 mb-7">		
+			<form id="formUser" name="formUser"
+					th:action="@{${formUserUrl}}" method="post"
+					th:object="${formUser}"
+					class="needs-validation"
+					novalidate>
+					
+				<th:block th:insert="fragments/error/error :: default">[Error default]</th:block>
+				
+				<fieldset>
+				
+					<div class="row">
+					
+						<input type="hidden" th:field=*{id}>
+						
+						<div class="form-group col-12 col-sm-6 col-lg-4 my-1 px-3 mb-7">
+							<label for="login"
+								th:text="#{view.user.form.login}"></label> 
+									<input required type="text" class="form-control"
+										th:field=*{login} th:placeholder="#{view.user.form.login.placeholder}">
+									<div class="invalid-feedback" th:text="#{view.user.error.login.empty}"></div>
+						</div>
+						
+						
+						<div class="form-group col-12 col-sm-6 col-lg-4 my-1 px-3 mb-7">
+							<label for="name"
+								th:text="#{view.user.form.name}"></label> 
+									<input type="text" class="form-control"
+										th:field=*{name} th:placeholder="#{view.user.form.name.placeholder}">
+						</div>
+						
+						
+						<div class="form-group col-12 col-sm-6 col-lg-4 my-1 px-3 mb-7">
+							<label for="surname"
+								th:text="#{view.user.form.surname}"></label> 
+									<input type="text" class="form-control"
+										th:field=*{surname} th:placeholder="#{view.user.form.surname.placeholder}">
+						</div>
+						
+						<div class="form-group col-12 col-sm-6 col-lg-4 my-1 px-3 mb-7">
+							<label for="email"
+								th:text="#{view.user.form.email}"></label> 
+									<input type="email" class="form-control" required
+										th:field=*{email} th:placeholder="#{view.user.form.email.placeholder}">
+									<div class="invalid-feedback" th:text="#{view.user.error.email.empty}"></div>
+						</div>
+						
+						<div class="form-group col-12 col-sm-6 col-lg-4 my-1 px-3 mb-7">
+							<label for="active"
+								th:text="#{view.user.form.active}"></label> 
+									<select 
+										class="form-control selectpicker" 
+										data-size="2"
+										th:field="*{active}"
+										th:title="#{view.user.form.active.placeholder}">
+									  		<option value="0" th:text="#{view.general.no}">[no activo]</option>
+									  		<option value="1" th:text="#{view.general.si}">[activo]</option>
+									</select>
+						</div>
+						
+						<div class="form-group col-12 col-sm-6 col-lg-4 my-1 px-3 mb-7">
+								
+<!--								<label for="roles"
+									th:text="#{view.user.form.roles}"></label>
+								<select 
+											multiple
+											required
+											class="form-control selectpicker" 
+											data-live-search="true"
+											data-size="10"
+											th:field="*{roles}"
+											th:title="#{view.user.form.roles.placeholder}">
+										  <option 
+									    	th:each="role : ${userRoles}" 
+									    	th:value="${role.id}" 
+									    	th:text="${role.functionalGroup.name + ' - ' + role.name}">[user roles]</option>
+								</select>-->
+								<div class="invalid-feedback" th:text="#{view.user.error.roles.empty}"></div>
+                                                                <lu class="list-group border-0 justify-content-end">
+                                                                    <li class="list-group-item border-0">
+                                                                    <a data-bs-toggle="modal" data-bs-target=".modalImportRoles" th:attr="data-select-name=roles" class="float-right pe-0 ms-auto btn bg-transparent d-flex align-items-center w-auto h-auto">
+                                                                            <span class="material-icons">groups</span>
+                                                                            <span class="m-0 ms-2" th:text="#{view.user.form.roles.importar.de.usuario}"></span>
+                                                                    </a>
+                                                                    </li>
+                                                                    <li class="list-group-item border-0">
+                                                                    <a data-bs-toggle="modal" data-bs-target=".modalSelectRolesFromGroups" th:attr="data-select-name=roles" class="float-right pe-0 ms-auto btn bg-transparent d-flex align-items-center w-auto h-auto">
+                                                                            <span class="material-icons">group_work</span>
+                                                                            <span class="m-0 ms-2" th:text="#{view.user.form.roles.seleccionar.de.roles}"></span>
+                                                                    </a>
+                                                                    </li>
+                                                                    <li class="list-group-item border-0">
+                                                                    <a data-bs-toggle="modal" data-bs-target=".modalFunctionalGroups" class="float-right pe-0 ms-auto btn bg-transparent d-flex align-items-center w-auto h-auto">
+                                                                            <span class="material-icons">hub</span>
+                                                                            <span class="m-0 ms-2" th:text="#{view.user.form.roles.seleccionar.de.grupo}"></span>
+                                                                    </a>
+                                                                    </li>
+                                                                </lu>
+						</div>
+						
+					</div>
+					
+				</fieldset>
+				
+				<div class="row mt-6 mb-6 pe-3">
+					<div class="d-flex col-12 my-1 align-items-center">
+						<button type="submit" class="ms-auto btn btn-primary">
+							<th:block th:text="#{view.general.button.submit}"></th:block>
+						</button>					
+					</div>
+				</div>
+            <input type="hidden" th:field="*{roles}">
+            <input type="hidden" th:field="*{functionalGroups}">
+                                			</form>
+                                <!-- Tablas con Roles y Grupos funcionales -->
+<div class="row">
+
+    <div class="col-12 col-sm-12 col-md-8 col-lg-8 mb-7">
+        <label th:text="#{view.user.form.roles}"></label>
+	<table class="hover table dt-responsive nowrap dataTable no-footer dtr-inline" id="tableRoles">
+            <thead>
+                <tr>
+                    <th th:text="#{view.user.detail.name}"></th>
+                    <th th:text="#{view.user.detail.functional.groups}"></th>
+                </tr>
+            </thead>
+            <th:block th:each="role : ${formUser.roles}">
+              <th:block th:each="uRole : ${userRoles}">
+            <tr th:if="${uRole.id == role}">
+                <td th:text="${uRole.name}"></td>
+                <td th:text="${uRole.functionalGroup.name}"></td>
+            </tr>
+              </th:block>
+            </th:block>
+	</table>
+    </div>
+    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+        <label th:text="#{view.user.detail.functional.groups}"></label>
+	<table class="hover table dt-responsive nowrap dataTable no-footer dtr-inline" id="tableFunctionalGroup">
+            <thead>
+                <tr>
+                    <th th:text="#{view.user.detail.name}"></th>
+                </tr>
+            </thead>
+            <th:block th:each="fg : ${formUser.functionalGroups}">
+              <th:block th:each="uFg : ${functionalGroups}">
+            <tr th:if="${uFg.id == fg}">
+                <td th:text="${uFg.name}"></td>
+            </tr>
+              </th:block>
+            </th:block>
+	</table>
+    </div>
+
+
+		</div>
+</div>
+<th:block th:insert="fragments/modal/modal-import-roles">[Import roles]</th:block>
+<th:block th:insert="fragments/modal/modal-select-roles-from-groups">[Import roles]</th:block>
+<th:block th:insert="fragments/modal/modal-select-functional-groups">[Import functional groups]</th:block>

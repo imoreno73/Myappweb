@@ -1,0 +1,12 @@
+<div th:fragment="header" th:remove="tag">
+<header id="banner" class="py-5 mb-n6 d-none">
+	<div th:if="${changeUrl}" id="change-url" class="d-none" th:attr="data-url=@{${changeUrl}}"></div>
+	<div class="container-fluid px-6 px-md-11 header-main">		
+		<a th:href="@{/}" title="Correos Express" class="header-logo">			
+			<img class="logo" alt="Logo Correos Express" th:src="${@environment.getProperty('cex.cdn.host') + '/images/'+session.webAppTheme+'/logo.svg'}" th:srcset="${@environment.getProperty('cex.cdn.host') + '/images/'+session.webAppTheme+'/logo.svg'}" />			
+		</a>
+	</div>
+</header>
+</div>
+
+

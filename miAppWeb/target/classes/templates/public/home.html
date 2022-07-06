@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	layout:decorate="~{layout/layout-home}">
+<body class="overflow-y-auto">
+
+	<div layout:fragment="content" th:remove="tag">
+
+		<div class="row mb-8">
+			<div class="col-12">	
+				<h1 th:text="#{view.home.title}"></h1>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-12">		
+				<th:block th:unless="${#lists.isEmpty(cexMenu)}" th:remove="tag">
+					<th:block th:each="level1 : ${cexMenu}" th:remove="tag">				
+						<div class="tiles-container d-inline-flex me-5" th:if="${level1.icon != null}">
+							<div class="tile-group">
+								<a th:href="@{${level1.link}}">
+									<div class="tile d-flex m-0">
+										<span class="material-icons tile-icon m-auto" th:text="${level1.icon}">[icon class]</span>
+									</div>
+									<div class="tile-label text-secondary" th:text="${level1.name}">[Name]</div>
+								</a>
+							</div>
+						</div>					
+					</th:block>
+				</th:block>
+			</div>		
+		</div>
+	</div>
+</body>
+</html>
