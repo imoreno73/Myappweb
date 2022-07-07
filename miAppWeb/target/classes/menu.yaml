@@ -2,7 +2,7 @@
 menu: 
   es:
 
-     - 
+    - 
       anonymous: true
       type: local
       icon: home
@@ -49,7 +49,7 @@ menu:
       
   pt: 
 
-     - 
+    - 
       anonymous: true
       type: local
       icon: home
