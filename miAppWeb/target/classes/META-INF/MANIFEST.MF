@@ -1,12 +1,12 @@
 Manifest-Version: 1.0
-Built-By: imorenof
-Build-Jdk: 18.0.1.1
 Implementation-Title: miAppWeb
 Implementation-Version: 1.0-SNAPSHOT
+Built-By: imorenof
 Implementation-Vendor-Id: es.cex
-Implementation-Vendor: Chronoexpres
-Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
- -starter-parent/parent-pom/miAppWeb
-Main-Class: es.cex.Application
+Build-Jdk: 1.8.0_333
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/parent-pom/miAppWeb
 Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Chronoexpres
+Main-Class: es.cex.Application
 

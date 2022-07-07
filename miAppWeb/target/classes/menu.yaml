@@ -1,6 +1,16 @@
 --- 
 menu: 
-  es:   
+  es:
+
+     - 
+      anonymous: true
+      type: local
+      icon: home
+      link: /delegaciones
+      name: "Delegaciones"
+      showName: false
+      roles: ~ 
+
     - 
       anonymous: true
       type: local
@@ -38,6 +48,16 @@ menu:
       roles: ~    
       
   pt: 
+
+     - 
+      anonymous: true
+      type: local
+      icon: home
+      link: /delegaciones
+      name: "(pt) Delegaciones"
+      showName: false
+      roles: ~ 
+
     - 
       anonymous: true
       type: local
@@ -74,7 +94,16 @@ menu:
       showName: false
       roles: ~ 
       
-  en: 
+  en:
+  
+    - 
+      anonymous: true
+      type: local
+      icon: home
+      link: /delegaciones
+      name: "(en) Delegaciones"
+      showName: false
+      roles: ~ 
     - 
       anonymous: true
       type: local
