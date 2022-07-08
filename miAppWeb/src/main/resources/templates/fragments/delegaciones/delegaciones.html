@@ -1,0 +1,53 @@
+<div class="row mb-5">
+			<div class="col-12 d-flex align-items-center">
+				<h2 th:text="${delegacionesTitle}"></h2>
+				<button data-action="goToPrevPage" th:attr="data-link=@{/delegaciones}" class="backButton ms-auto btn bg-transparent d-flex align-items-center w-auto h-auto">
+					<span class="material-icons">arrow_back</span>
+					<span class="m-0 ms-2" th:text="#{view.general.link.back}"></span>
+				</button>
+			</div>			
+</div>
+<hr class="section-spacer">
+<div class="row">		
+		<div class="col-12 py-3 mb-4">		
+			<form id="formdelegaciones" name="formDelegaciones"
+					th:action="@{${formDelegacionesUrl}}" method="post"
+					th:object="${formDelegaciones}"
+					class="needs-validation"
+					novalidate>
+					
+				<th:block th:insert="fragments/error/error :: default">[Error default]</th:block>
+				
+				<fieldset>
+				
+					<div class="row">
+					
+						<input type="hidden" th:field=*{id}>
+						
+						<div class="form-group col-12 col-sm-6 col-lg-4 my-1 px-3 mb-4">
+							<label for="name"
+								th:text="#{view.delegaciones.form.name}"></label> 
+									<input required 
+										   type="text" 
+										   class="form-control" 
+										   th:field=*{name} 
+										   th:placeholder="#{view.delegaciones.form.name.placeholder}">
+									<div class="invalid-feedback" th:text="#{view.delegaciones.error.name.empty}"></div>
+						</div>
+						
+					</div>
+					
+				</fieldset>
+				
+				<div class="row mt-6 mb-6 pe-3">
+					<div class="d-flex col-12 my-1 align-items-center">
+						<button type="submit" class="ms-auto btn btn-primary">
+							<th:block th:text="#{view.general.button.submit}"></th:block>
+						</button>					
+					</div>
+				</div>
+					
+			</form>
+
+		</div>
+</div>
