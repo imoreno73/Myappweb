@@ -149,6 +149,31 @@ public final class Constant {
 
 	/** CEX_AUTH */
 	public static final String CEX_AUTH = "cexauth";
+	
+	
+	/** DELEGACIONES_LIST_ATTRIBUTE_KEY **/
+	public static final String DELEGACIONES_LIST_ATTRIBUTE_KEY = "delegaciones";
+
+	/** DELEGACIONES_SEARCH_FORM_ATTRIBUTE_KEY **/
+	public static final String DELEGACIONES_SEARCH_FORM_ATTRIBUTE_KEY = "formdelegacionesSearch";
+
+	/** DELEGACIONES_SLUG_PATH_VARIABLE_KEY **/
+	public static final String DELEGACIONES_SLUG_PATH_VARIABLE_KEY = "slug";
+
+	/** DELEGACIONES_ID_PATH_VARIABLE_KEY **/
+	public static final String DELEGACIONES_ID_PATH_VARIABLE_KEY = "id";
+
+	/** DELEGACIONES_DETAIL_ATTRIBUTE_KEY **/
+	public static final String DELEGACIONES_DETAIL_ATTRIBUTE_KEY = "delegacionesDetail";
+
+	/** DELEGACIONES_FORM_ATTRIBUTE_KEY **/
+	public static final String DELEGACIONES_FORM_ATTRIBUTE_KEY = "formDelegaciones";
+
+	/** DELEGACIONES_FORM_TITLE_ATTRIBUTE_KEY **/
+	public static final String DELEGACIONES_FORM_TITLE_ATTRIBUTE_KEY = "delegacionesFormTitle";
+
+	/** DELEGACIONES_FORM_URL_ATTRIBUTE_KEY **/
+	public static final String DELEGACIONES_FORM_URL_ATTRIBUTE_KEY = "formDelegacionesUrl";
 
 	/**
 	 * Avoid class instance
