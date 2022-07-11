@@ -151,6 +151,9 @@ public final class Constant {
 	public static final String CEX_AUTH = "cexauth";
 	
 	
+	/** ROLE_DELEGACIONES_ID_VARIABLE_KEY **/
+	public static final String ROLE_DELEGACIONES_ID_VARIABLE_KEY = "delegacionesId";
+	
 	/** DELEGACIONES_LIST_ATTRIBUTE_KEY **/
 	public static final String DELEGACIONES_LIST_ATTRIBUTE_KEY = "delegaciones";
 

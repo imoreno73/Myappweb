@@ -89,6 +89,36 @@ public final class MappingConstant {
 
 	/** FUNCTIONAL_GROUP_DELETE */
 	public static final String FUNCTIONAL_GROUP_DELETE = "/delete/{id}";
+	
+	//DELEGACIONES
+	
+	/** ROLE_ROOT */
+	public static final String DELEGACIONES_ROOT = "/delegaciones";
+
+	/** DELEGACIONES_ROOT */
+	public static final String DELEGACIONES_LIST = "/list";
+
+	/** DELEGACIONES_SEARCH */
+	public static final String DELEGACIONES_SEARCH = "/search";
+
+	/** DELEGACIONES_DETAIL */
+	public static final String DELEGACIONES_DETAIL = "/{slug}";
+
+	/** DELEGACIONES_NEW */
+	public static final String DELEGACIONES_NEW = "/new";
+
+	/** DELEGACIONES_CREATE */
+	public static final String DELEGACIONES_CREATE = "/create";
+
+	/** DELEGACIONES_EDIT */
+	public static final String DELEGACIONES_EDIT = "/edit/{slug}";
+
+	/** DELEGACIONES_UPDATE */
+	public static final String DELEGACIONES_UPDATE = "/update/{slug}";
+
+	/** DELEGACIONES_DELETE */
+	public static final String DELEGACIONES_DELETE = "/delete/{id}";
+
 
 	/** PAGE_ROOT */
 	public static final String PAGE_ROOT = "/pages";

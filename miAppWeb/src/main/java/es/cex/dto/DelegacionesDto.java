@@ -4,7 +4,7 @@ package es.cex.dto;
  * Class with delegaciones DTO
  */
 
-public class FunctionalGroupDto extends ErrorDto {
+public class DelegacionesDto extends ErrorDto {
 
 	/**
 	 * Serial number
@@ -15,11 +15,11 @@ public class FunctionalGroupDto extends ErrorDto {
 	private String name;
 	private String slug;
 
-        public FunctionalGroupDto(Long id) {
+        public DelegacionesDto(Long id) {
             this.id = id;
         }
 
-        public FunctionalGroupDto() {
+        public DelegacionesDto() {
             super();
         }
 

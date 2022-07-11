@@ -5,9 +5,7 @@
 
 <head>
 	<th:block th:insert="fragments/head/head :: default">[Head default]</th:block>
-        <th:block th:insert="fragments/head/head :: datatable">[Head datatable]</th:block>
 	<th:block th:insert="fragments/head/head :: notification">[Head notification]</th:block>
-	<th:block th:insert="fragments/head/head :: form">[Head Form]</th:block>
 	<th:block th:insert="fragments/head/head :: app">[Head app]</th:block>
 </head>
 
@@ -18,8 +16,8 @@
 	    	<nav th:replace="fragments/menu/navbar-menu">[Menu]</nav>	
 	    </div>
 		<div layout:fragment="content">[Content]</div>
-		<h1>aqui estamos</h1>
 	</div>
-	<div th:replace="fragments/footers/footer">[Pie]</div>		
+	<div th:replace="fragments/footers/footer">[Pie]</div>
+	<div>aqui estoy</div>		
 </body>
 </html>

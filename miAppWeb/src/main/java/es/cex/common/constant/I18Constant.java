@@ -91,6 +91,36 @@ public final class I18Constant {
 
 	/** I18_VIEW_PAGE_HEAD_TITLE */
 	public static final String I18_VIEW_PAGE_HEAD_TITLE = "view.page.head.title";
+	
+	
+	// añadimos delegaciones
+	
+	/** I18_VIEW_DELEGACIONES_HEAD_TITLE */
+	public static final String I18_VIEW_DELEGACIONES_HEAD_TITLE = "view.delegaciones.head.title";
+
+	/** I18_VIEW_DELEGACIONES_NEW_TITLE **/
+	public static final String I18_DELEGACIONES_NEW_TITLE = "view.delegaciones.new.title";
+
+	/** I18_VIEW_DELEGACIONES_EDIT_TITLE **/
+	public static final String I18_DELEGACIONES_EDIT_TITLE = "view.delegaciones.edit.title";
+
+	/** I18_VIEW_DELEGACIONES_DETAILS_TITLE **/
+	public static final String I18_DELEGACIONES_DETAILS_TITLE = "view.delegaciones.details.title";
+
+	/** I18_NOTIFICATIONS_DELEGACIONES_TITLE */
+	public static final String I18_NOTIFICATIONS_DELEGACIONES_TITLE = "view.notification.delegaciones.title";
+
+	/** I18_NOTIFICATIONS_DELEGACIONES_CREATE_SUCCESS */
+	public static final String I18_NOTIFICATIONS_DELEGACIONES_CREATE_SUCCESS = "view.notification.delegaciones.create.success.text";
+
+	/** I18_NOTIFICATIONS_DELEGACIONES_UPDATE_SUCCESS */
+	public static final String I18_NOTIFICATIONS_DELEGACIONES_UPDATE_SUCCESS = "view.notification.delegaciones.update.success.text";
+
+	/** I18_NOTIFICATIONS_DELEGACIONES_DELETE_SUCCESS */
+	public static final String I18_NOTIFICATIONS_DELEGACIONES_DELETE_SUCCESS = "view.notification.delegaciones.delete.success.text";
+
+	/** I18_NOTIFICATIONS_DELEGACIONES_DELETE_ERROR */
+	public static final String I18_NOTIFICATIONS_DELEGACIONES_DELETE_ERROR = "view.notification.delegaciones.delete.error.text";
 
 
 	/**
