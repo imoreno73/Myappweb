@@ -17,8 +17,9 @@
 		<div class="row">
 	    	<nav th:replace="fragments/menu/navbar-menu">[Menu]</nav>	
 	    </div>
-		<div layout:fragment="content">[Content]</div>
-		<h1>aqui estamos</h1>
+		<!-- <div layout:fragment="content">[Content]</div> -->
+		<span th:text="#{view.delegation.title}"></span>
+<!-- 		<h1>ALTA DELEGACION</h1> -->
 	</div>
 	<div th:replace="fragments/footers/footer">[Pie]</div>		
 </body>
