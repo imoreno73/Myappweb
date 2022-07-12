@@ -5,7 +5,7 @@
 
 <head>
 	<th:block th:insert="fragments/head/head :: default">[Head default]</th:block>
-        <th:block th:insert="fragments/head/head :: datatable">[Head datatable]</th:block>
+    <th:block th:insert="fragments/head/head :: datatable">[Head datatable]</th:block>
 	<th:block th:insert="fragments/head/head :: notification">[Head notification]</th:block>
 	<th:block th:insert="fragments/head/head :: form">[Head Form]</th:block>
 	<th:block th:insert="fragments/head/head :: app">[Head app]</th:block>
@@ -18,8 +18,23 @@
 	    	<nav th:replace="fragments/menu/navbar-menu">[Menu]</nav>	
 	    </div>
 		<!-- <div layout:fragment="content">[Content]</div> -->
-		<span th:text="#{view.delegation.title}"></span>
-<!-- 		<h1>ALTA DELEGACION</h1> -->
+			<h2 th:text="#{view.delegation.title}" class="bg-primary text-center"></h2>
+			<br>
+			<h3 th:text="#{view.delegation.subtitle1}" class="bg-info"></h3>
+				<form class="container-fluid">
+					<div class="row">
+						<div class="col">
+						<p>Fecha apertura</p>
+						<input type="date" id="opendate" name="#{view.delegation.opendate}" value="2018-07-22" 
+						min="1945-01-01" max="2022-12-31">
+						</div>
+
+						<div class="col">
+						<p>Pais</p>
+						<input type="text" id="pais" name="pais" th:value="#{view.delegation.pais}"/>
+						</div>
+					</div>
+				</form>
 	</div>
 	<div th:replace="fragments/footers/footer">[Pie]</div>		
 </body>
