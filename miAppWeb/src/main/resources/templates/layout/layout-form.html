@@ -18,23 +18,99 @@
 	    	<nav th:replace="fragments/menu/navbar-menu">[Menu]</nav>	
 	    </div>
 		<!-- <div layout:fragment="content">[Content]</div> -->
-			<h2 th:text="#{view.delegation.title}" class="bg-primary text-center"></h2>
+			<h2 th:text="#{view.delegation.title}" class="bg-primary text-center rounded-3"></h2>
 			<br>
-			<h3 th:text="#{view.delegation.subtitle1}" class="bg-info"></h3>
-				<form class="container-fluid">
+			<h3 th:text="#{view.delegation.subtitle1}" class="bg-info rounded-3"></h3>
+				<form class="container-fluid border border-success">
 					<div class="row">
 						<div class="col">
 						<p>Fecha apertura</p>
-						<input type="date" id="opendate" name="#{view.delegation.opendate}" value="2018-07-22" 
+						<input class="border border-dark" type="date" id="opendate" name="#{view.delegation.opendate}" value="2018-07-22" 
 						min="1945-01-01" max="2022-12-31">
 						</div>
-
 						<div class="col">
 						<p>Pais</p>
-						<input type="text" id="pais" name="pais" th:value="#{view.delegation.pais}"/>
+						<input class="border border-dark" type="text" id="pais" name="pais" th:value="#{view.delegation.pais}"/>
 						</div>
 					</div>
-				</form>
+					</br>
+					
+					<div class="row">
+						<div class="col">
+						<p>Delegacion origen</p>
+						<input class="border border-dark" type="text" id="delegationorigin" name="delegationorigin" th:value="#{view.delegation.delegationorigin}">
+						</div>
+						<div class="col">
+						<p>Delegacion destino</p>
+						<input class="border border-dark" type="text" id="delegationdestiny" name="delegationdestiny" th:value="#{view.delegation.delegationdestiny}">
+						</div>
+					</div>
+					</br>
+				</form></br>
+				
+			<h3 th:text="#{view.delegation.subtitle2}" class="bg-info rounded-3"></h3>
+				<form class="container-fluid border border-success">
+					<div class="row">
+						<div class="col">
+						<p>Nombre delegacion</p>
+						<input class="border border-dark" type="text" id="delegationname" name="delegationname" th:value="#{view.delegation.namedelegation}">
+						</div>
+						<div class="col">
+						<p>Direccion</p>
+						<input class="border border-dark" type="text" id="delegationadress" name="delegationadress" th:value="#{view.delegation.adress}">
+						</div>
+					</div></br>
+					<div class="row">
+						<div class="col">
+						<p>Poblacion</p>
+						<input class="border border-dark" type="text" id="city" name="city" th:value="#{view.delegation.city}">
+						</div>
+						<div class="col">
+						<p>CP</p>
+						<input class="border border-dark" type="text" id="cp" name="cp" th:value="#{view.delegation.cp}">
+						</div>
+					</div></br>
+					<div class="row">
+						<div class="col">
+						<p>Provincia</p>
+						<input class="border border-dark" type="text" id="province" name="province" th:value="#{view.delegation.province}">
+						</div>
+					</div></br>
+					
+					<div class="row">
+						<div class="col">
+						<p>Nif/dni</p>
+						<input type="text" name="dni" id="dni" placeholder="DNI" maxlength="9" tabindex="4" 
+						class="input-2 border border-dark" onkeypress="return soloLetrasNumeros(event);">
+						</div>
+						<div class="col">
+						<p>Horario atencion</p>
+						<input class="border border-dark" type="text" id="time" name="time" th:value="#{view.delegation.time}">
+						</div>
+					</div></br>
+					
+					<div class="row">
+						<div class="col">
+						<p>Geo latitud</p>
+						<input class="border border-dark" type="text" id="geolat" name="geolat" th:value="#{view.delegation.geolat}">
+						</div>
+						<div class="col">
+						<p>Geo longitud</p>
+						<input class="border border-dark" type="text" id="geolong" name="geolong" th:value="#{view.delegation.geolong}">
+						</div>
+					</div></br>					
+					<div class="row">
+						<div class="col">
+						<input type="checkbox" id="reexpedir" name="reexpedir" th:text="Reexpedir">
+						</div>
+						<div class="col">
+						<input type="checkbox" id="recoger" name="recoger" th:text="Recojer">
+						</div>
+					</div></br>
+					
+				</form></br>
+			<h3 th:text="#{view.delegation.subtitle3}" class="bg-info rounded-3"></h3>
+			<h3 th:text="#{view.delegation.subtitle4}" class="bg-info rounded-3"></h3>
 	</div>
 	<div th:replace="fragments/footers/footer">[Pie]</div>		
 </body>
