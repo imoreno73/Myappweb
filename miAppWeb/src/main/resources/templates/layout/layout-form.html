@@ -26,12 +26,12 @@
 					<div class="row">
 						<div class="col">
 						<p>Fecha apertura</p>
-						<input class="border border-dark" type="date" id="opendate"  name="#{view.delegation.opendate}" value="#{view.delegation.date}" 
+						<input class="border border-dark rounded" type="date" id="opendate"  name="#{view.delegation.opendate}" value="#{view.delegation.date}" 
 						min="1945-01-01" max="2022-12-31">
 						</div>
 						<div class="col">
 						<p>Pais</p>
-						<select class="form-select" aria-label="Seleccione pais">
+						<select class="form-select border border-dark rounded" aria-label="Seleccione pais">
   						<option value="1" selected>España</option>
   						<option value="2">Portugal</option>
   						</select>
@@ -42,11 +42,11 @@
 					<div class="row">
 						<div class="col">
 						<p>Delegacion origen</p>
-						<input class="border border-dark" type="text" id="delegationorigin" name="delegationorigin" th:value="#{view.delegation.delegationorigin}">
+						<input class="border border-dark rounded" type="text" id="delegationorigin" name="delegationorigin" th:value="#{view.delegation.delegationorigin}">
 						</div>
 						<div class="col">
 						<p>Delegacion destino</p>
-						<input class="border border-dark"  type="text" id="delegationdestiny" maxlength="3" name="delegationdestiny" th:value="#{view.delegation.delegationdestiny}">
+						<input class="border border-dark rounded text-muted"  type="text" id="delegationdestiny" placeholder="Introduce 3 digitos" maxlength="3" name="delegationdestiny" th:value="#{view.delegation.delegationdestiny}">
 						</div>
 					</div>
 					</br>
@@ -57,27 +57,27 @@
 					<div class="row">
 						<div class="col">
 						<p>Nombre delegacion</p>
-						<input class="border border-dark" type="text" id="delegationname" name="delegationname" th:value="#{view.delegation.namedelegation}">
+						<input class="border border-dark rounded" type="text" id="delegationname" name="delegationname" th:value="#{view.delegation.namedelegation}">
 						</div>
 						<div class="col">
 						<p>Direccion</p>
-						<input class="border border-dark" type="text" id="delegationadress" name="delegationadress" th:value="#{view.delegation.adress}">
+						<input class="border border-dark rounded" type="text" id="delegationadress" name="delegationadress" th:value="#{view.delegation.adress}">
 						</div>
 					</div></br>
 					<div class="row">
 						<div class="col">
 						<p>Poblacion</p>
-						<input class="border border-dark" type="text" id="city" name="city" th:value="#{view.delegation.city}">
+						<input class="border border-dark rounded" type="text" id="city" name="city" th:value="#{view.delegation.city}">
 						</div>
 						<div class="col">
 						<p>CP</p>
-						<input class="border border-dark" type="text" id="cp" name="cp" th:value="#{view.delegation.cp}">
+						<input class="border border-dark rounded" type="text" id="cp" name="cp" th:value="#{view.delegation.cp}">
 						</div>
 					</div></br>
 					<div class="row">
 						<div class="col-6">
 						<p>Provincia</p>
-						<select class="form-select" aria-label="Seleccione provincia">
+						<select class="form-select border border-dark rounded" aria-label="Seleccione provincia">
 	  						<option value="1" selected>Asturias</option>
 	  						<option value="2">Albacete</option>
 	  						<option value="3">Alicante</option>
@@ -182,22 +182,22 @@
 						<div class="col">
 						<p>Nif/dni</p>
 						<input type="text" name="dni" id="dni" placeholder="DNI" maxlength="9" tabindex="4" 
-						class="input-2 border border-dark" onkeypress="return soloLetrasNumeros(event);">
+						class="input-2 border border-dark rounded" onkeypress="return soloLetrasNumeros(event);">
 						</div>
 						<div class="col">
 						<p>Horario atencion</p>
-						<input class="border border-dark" type="text" id="time" name="time" th:value="#{view.delegation.time}">
+						<input class="border border-dark rounded" type="text" id="time" name="time" th:value="#{view.delegation.time}">
 						</div>
 					</div></br>
 					
 					<div class="row">
 						<div class="col">
 						<p>Geo latitud</p>
-						<input class="border border-dark" type="text" id="geolat" name="geolat" th:value="#{view.delegation.geolat}">
+						<input class="border border-dark rounded" type="text" id="geolat" name="geolat" th:value="#{view.delegation.geolat}">
 						</div>
 						<div class="col">
 						<p>Geo longitud</p>
-						<input class="border border-dark" type="text" id="geolong" name="geolong" th:value="#{view.delegation.geolong}">
+						<input class="border border-dark rounded" type="text" id="geolong" name="geolong" th:value="#{view.delegation.geolong}">
 						</div>
 					</div></br>					
 					<div class="row">
@@ -284,7 +284,7 @@
 	<button type="button" class="btn btn-light">Cancelar</button>
 	</div>
 	<div class="d-flex justify-content-end">
-	<button type="button" class="btn btn-primary">Aceptar</button>
+	<button type="submit" class="btn btn-primary">Aceptar</button>
 	</div>
 	<div th:replace="fragments/footers/footer">[Pie]</div>	
 	</br>	

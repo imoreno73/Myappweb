@@ -42,10 +42,10 @@ public final class ViewsConstant {
 	public static final String VIEW_DELEGACIONES_SEARCH_PAGE = "public/delegaciones/altadelegacion";
 
 	/** VIEW_DELEGACIONES_DETAIL_PAGE */
-	public static final String VIEW_DELEGACIONES_DETAIL_PAGE = "public/functionalGroup/functionalGroupDetails";
+	public static final String VIEW_DELEGACIONES_DETAIL_PAGE = "public/delegaciones/delegacionesDetails";
 
 	/** VIEW_DELEGACIONES_NEW_OR_EDIT_PAGE */
-	public static final String VIEW_DELEGACIONES_NEW_OR_EDIT_PAGE = "public/functionalGroup/functionalGroupNewOrEdit";
+	public static final String VIEW_DELEGACIONES_NEW_OR_EDIT_PAGE = "public/delegaciones/delegacionesNewOrEdit";
 
 	
 	
