@@ -4,6 +4,7 @@
 	th:attr="lang=${#locale}">
 
 <head>
+	<meta charset="UTF-8">
 	<th:block th:insert="fragments/head/head :: default">[Head default]</th:block>
     <th:block th:insert="fragments/head/head :: datatable">[Head datatable]</th:block>
 	<th:block th:insert="fragments/head/head :: notification">[Head notification]</th:block>
@@ -18,19 +19,22 @@
 	    	<nav th:replace="fragments/menu/navbar-menu">[Menu]</nav>	
 	    </div>
 		<!-- <div layout:fragment="content">[Content]</div> -->
-			<h2 th:text="#{view.delegation.title}" class="bg-primary text-center rounded-3"></h2>
+			<h2 th:text="#{view.delegation.title}" class="bg-secondary text-primary text-center rounded-3"></h2>
 			<br>
-			<h3 th:text="#{view.delegation.subtitle1}" class="bg-info rounded-3"></h3>
+			<h3 th:text="#{view.delegation.subtitle1}" class="bg-danger text-white rounded-3"></h3>
 				<form class="container-fluid border border-success">
 					<div class="row">
 						<div class="col">
 						<p>Fecha apertura</p>
-						<input class="border border-dark" type="date" id="opendate" name="#{view.delegation.opendate}" value="2018-07-22" 
+						<input class="border border-dark" type="date" id="opendate"  name="#{view.delegation.opendate}" value="#{view.delegation.date}" 
 						min="1945-01-01" max="2022-12-31">
 						</div>
 						<div class="col">
 						<p>Pais</p>
-						<input class="border border-dark" type="text" id="pais" name="pais" th:value="#{view.delegation.pais}"/>
+						<select class="form-select" aria-label="Seleccione pais">
+  						<option value="1" selected>España</option>
+  						<option value="2">Portugal</option>
+  						</select>
 						</div>
 					</div>
 					</br>
@@ -42,13 +46,13 @@
 						</div>
 						<div class="col">
 						<p>Delegacion destino</p>
-						<input class="border border-dark" type="text" id="delegationdestiny" name="delegationdestiny" th:value="#{view.delegation.delegationdestiny}">
+						<input class="border border-dark"  type="text" id="delegationdestiny" maxlength="3" name="delegationdestiny" th:value="#{view.delegation.delegationdestiny}">
 						</div>
 					</div>
 					</br>
 				</form></br>
 				
-			<h3 th:text="#{view.delegation.subtitle2}" class="bg-info rounded-3"></h3>
+			<h3 th:text="#{view.delegation.subtitle2}" class="bg-danger text-white rounded-3"></h3>
 				<form class="container-fluid border border-success">
 					<div class="row">
 						<div class="col">
@@ -71,12 +75,109 @@
 						</div>
 					</div></br>
 					<div class="row">
-						<div class="col">
+						<div class="col-6">
 						<p>Provincia</p>
-						<input class="border border-dark" type="text" id="province" name="province" th:value="#{view.delegation.province}">
+						<select class="form-select" aria-label="Seleccione provincia">
+	  						<option value="1" selected>Asturias</option>
+	  						<option value="2">Albacete</option>
+	  						<option value="3">Alicante</option>
+	  						<option value="4">Almeria</option>
+	  						<option value="5">Alava</option>
+	  						<option value="6">Avila</option>
+	  						<option value="7">Badajoz</option>
+	  						<option value="8">Baleares</option>
+	  						<option value="9">Barcelona</option>
+	  						<option value="10">Bizkaia</option>
+	  						<option value="11">Burgos</option>
+	  						<option value="12">Caceres</option>
+	  						<option value="13">Cadiz</option>
+	  						<option value="14">Cantabria</option>
+	  						<option value="15">Castellon</option>
+	  						<option value="16">Ciudad real</option>
+	  						<option value="17">Cordoba</option>
+	  						<option value="18">La coruña</option>
+	  						<option value="19">Cuenca</option>
+	  						<option value="20">Guipuzkoa</option>
+	  						<option value="21">Girona</option>
+	  						<option value="22">Granada</option>
+	  						<option value="23">Guadalajara</option>
+	  						<option value="24">Huelva</option>
+	  						<option value="25">Huesca</option>
+	  						<option value="26">Jaen</option>
+	  						<option value="27">Leon</option>
+	  						<option value="28">Lleida</option>
+	  						<option value="29">Lugo</option>
+	  						<option value="30">Madrid</option>
+	  						<option value="31">Malaga</option>
+	  						<option value="32">Murcia</option>
+	  						<option value="33">Navarra</option>
+	  						<option value="34">Ourense</option>
+	  						<option value="35">Palencia</option>
+	  						<option value="36">Las Palmas</option>
+	  						<option value="37">Pontevedra</option>
+	  						<option value="38">La Rioja</option>
+	  						<option value="39">Salamanca</option>
+	  						<option value="40">Santa Cruz de Tenerife</option>
+	  						<option value="41">Segovia</option>
+	  						<option value="42">Sevilla</option>
+	  						<option value="43">Soria</option>
+	  						<option value="44">Tarragona</option>
+	  						<option value="45">Teruel</option>
+	  						<option value="46">Toledo</option>
+	  						<option value="47">Valencia</option>
+	  						<option value="48">Valladolid</option>
+	  						<option value="49">Zamora</option>
+	  						<option value="50">Zaragoza</option>
+	  						<option value="51">Ceuta</option>
+	  						<option value="52">Melilla</option>  						
+	  						<option value="53">Valença</option>
+	  						<option value="54">Viana</option>
+	  						<option value="55">Braga</option>
+	  						<option value="56">Barcelos</option>
+	  						<option value="57">Guimarães</option>
+	  						<option value="58">Porto</option>
+	  						<option value="59">Penafiel</option>
+	  						<option value="60">Bragança</option>
+	  						<option value="61">Miranda</option>
+	  						<option value="62">Moncorvo</option>
+	  						<option value="63">Vila real</option>
+	  						<option value="64">Feira</option>
+	  						<option value="65">Aveiro</option>
+	  						<option value="66">Lamego</option>
+	  						<option value="67">Trancoso</option>
+	  						<option value="68">Pinhel</option>
+	  						<option value="69">Guarda</option>
+	  						<option value="70">Linhares</option>
+	  						<option value="71">Viseu</option>
+	  						<option value="72">Castelo branco</option>
+	  						<option value="73">Arganil</option>
+	  						<option value="74">Coimbra</option>
+	  						<option value="75">Leiria</option>
+	  						<option value="76">Ourem</option>
+	  						<option value="77">Cinco Vilas</option>
+	  						<option value="78">Tomar</option>
+	  						<option value="79">Santarém</option>
+	  						<option value="80">Alcobaça</option>
+	  						<option value="81">Alenquer</option>
+	  						<option value="82">Torres Vedras</option>
+	  						<option value="83">Ribatejo</option>
+	  						<option value="84">Lisboa</option>
+	  						<option value="85">Setubal</option>
+	  						<option value="86">Crato</option>
+	  						<option value="87">Portalegre</option>
+	  						<option value="88">Vila Viçosa</option>
+	  						<option value="89">Avis</option>
+	  						<option value="90">Elvas</option>
+	  						<option value="91">Évora</option>
+	  						<option value="92">Beja</option>
+	  						<option value="93">Ourique</option>
+	  						<option value="94">Lagos</option>
+	  						<option value="95">Faro</option>
+	  						<option value="96">Tavira</option>	  						 						
+						</select>
 						</div>
 					</div></br>
-					
+										
 					<div class="row">
 						<div class="col">
 						<p>Nif/dni</p>
@@ -109,9 +210,83 @@
 					</div></br>
 					
 				</form></br>
-			<h3 th:text="#{view.delegation.subtitle3}" class="bg-info rounded-3"></h3>
-			<h3 th:text="#{view.delegation.subtitle4}" class="bg-info rounded-3"></h3>
+			<h3 th:text="#{view.delegation.subtitle3}" class="bg-danger text-white rounded-3"></h3>
+					<form class="container-fluid border border-success">
+					<div class="row">
+						<div class="col">
+							<p>Alta usuario</p>
+							<div class="input-group">							
+  							<textarea class="form-control" aria-label="Alta usuarios"></textarea>
+							</div>
+						</div>
+						<div class="col">
+							<p>Alta conductores</p>
+							<div class="input-group">							
+  							<textarea class="form-control" aria-label="Alta usuarios"></textarea>
+							</div>
+						</div>
+					</div></br>
+					<div class="row">
+						<div class="col">
+							<p>Alta usuario SGP</p>
+							<div class="input-group">							
+  							<textarea class="form-control" aria-label="Alta usuarios SGP"></textarea>
+							</div>
+						</div>
+						<div class="col">
+							<p>Alta usuario supervisores SGP</p>
+							<div class="input-group">							
+  							<textarea class="form-control" aria-label="Alta usuarios supervisores SGP"></textarea>
+							</div>
+						</div>
+					</div></br>
+					<div class="row">
+						<div class="col-6">
+							<p>Alta rutas SGP</p>
+							<div class="input-group">							
+  							<textarea class="form-control" aria-label="Alta rutas SGP"></textarea>
+							</div>
+						</div></div></br>
+					</form></br>
+			<h3 th:text="#{view.delegation.subtitle4}" class="bg-danger text-white rounded-3"></h3>
+					<form class="container-fluid border border-success">
+					<div class="row">
+						<div class="col">
+							<p>CP a migrar</p>
+							<div class="input-group">							
+  							<textarea class="form-control" aria-label="CP a migrar"></textarea>
+							</div>
+						</div>
+						<div class="col">
+							<p>Rutas a migrar SGP</p>
+							<div class="input-group">							
+  							<textarea class="form-control" aria-label="Rutas a migrar SGP"></textarea>
+							</div>
+						</div>
+					</div></br>
+					<div class="row">
+						<div class="col">
+							<p>Clientes a migrar</p>
+							<div class="input-group">							
+  							<textarea class="form-control" aria-label="Clientes a migrar"></textarea>
+							</div>
+						</div>
+						<div class="col">
+							<p>Equivalencia conductores</p>
+							<div class="input-group">							
+  							<textarea class="form-control" aria-label="Equivalencia conductores"></textarea>
+							</div>
+						</div>
+					</div></br>
+					</form></br>
 	</div>
-	<div th:replace="fragments/footers/footer">[Pie]</div>		
+	<div class="d-flex justify-content-end">
+	<button type="button" class="btn btn-light">Cancelar</button>
+	</div>
+	<div class="d-flex justify-content-end">
+	<button type="button" class="btn btn-primary">Aceptar</button>
+	</div>
+	<div th:replace="fragments/footers/footer">[Pie]</div>	
+	</br>	
 </body>
 </html>
