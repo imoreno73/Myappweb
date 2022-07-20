@@ -73,7 +73,7 @@
 						</div>
 						<div class="col">
 						<p>CP</p>
-						<input class="border border-dark rounded" type="text" id="cp" name="cp" th:value="#{view.delegation.cp}">
+						<input class="border border-dark rounded" type="text" id="cp" name="cp" th:value="#{view.delegation.cp}" onchange="validarCodigoPostal()">
 						</div>
 					</div></br>
 					<div class="row">
@@ -251,6 +251,19 @@
    	document.f1.provincia.options[0].selected = true 
 }
 
+  function validarCodigoPostal()
+  {
+    var input = document.getElementById("cp").value;
+    console.log(parseInt(input))
+    if(input.length == 5 && parseInt(input) >= 1000 && parseInt(input) <= 52999)
+    {
+      alert("codigo valido");
+    }
+    else{
+      alert("codigo invalido");
+     }
+  }
+  
  </script>
 	
 </body>
