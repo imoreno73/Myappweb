@@ -91,7 +91,7 @@
 						<div class="col">
 						<p>Nif/dni</p>
 						<input type="text" name="dni" id="dni" placeholder="DNI" maxlength="9" tabindex="4" 
-						class="input-2 border border-dark rounded" onkeypress="return soloLetrasNumeros(event);">
+						class="input-2 border border-dark rounded" onchange="nif()" onkeypress="return soloLetrasNumeros(event);">
 						</div>
 						<div class="col">
 						<p>Horario atencion</p>
@@ -262,7 +262,18 @@
     else{
       alert("codigo invalido");
      }
-  }
+  }  
+ 
+  function nif(dni){
+	  dni = document.getElementById("dni").value;
+	  var ex_regular_dni; 
+	  ex_regular_dni = /[0-9]{8}[A-Z]?/g;
+	  if(ex_regular_dni.test (dni) == true){
+	       alert('Dni corresponde');
+	  }else{
+	     alert('Dni erroneo, formato no válido');
+	   }
+	}
   
  </script>
 	
