@@ -18,42 +18,66 @@
 		<div class="row">
 	    	<nav th:replace="fragments/menu/navbar-menu">[Menu]</nav>	
 	    </div>
-		<!-- <div layout:fragment="content">[Content]</div> -->
 			<h2 th:text="#{view.delegation.title}" class="bg-secondary text-primary text-center rounded-3"></h2>
 			<br>
-			<form name="f1" action="#" th:action="@{/register}" method="post" th:object="${user}">
-			<h3 th:text="#{view.delegation.subtitle1}" class="bg-danger text-white rounded-3"></h3>
+			<form name="f1" class="needs-validation" novalidate>			
+			<h3 th:text="#{view.delegation.subtitle1}" class="bg-danger text-white rounded-3"></h3>			
 				<div class="container-fluid border border-success rounded-3">
 					<div class="row">
 						<div class="col-3">
-						<label>Fecha apertura</label>
-						<input class="border border-dark rounded" type="date" id="opendate"  name="#{view.delegation.opendate}" value="#{view.delegation.date}" 
-						min="1945-01-01" max="2022-12-31">
+						<label for="opendate" class="form-label">Fecha apertura</label>
+							<input type="date" class="form-control is-valid border border-dark rounded" id="opendate" name="#{view.delegation.opendate}" required 
+							min="1945-01-01" max="2022-12-31">
+						<label class="text-danger">Introduzca una Fecha</label>
+							<div class="valid-feedback">
+      						Fecha ok!!!
+    						</div>
+    						<div class="invalid-feedback">
+      						Fecha erronea!!!
+    						</div>
 						</div>
 						<div class="col-3 offset-5">
-						<label>Pais</label>
-						<select class="form-select border border-dark rounded" id="country" onchange="cambia_provincia()">
-  						<option value="0" selected>Seleccione pais</option>
-  						<option value="1">España</option>
-  						<option value="2">Portugal</option>
-  						</select>
+						<label for="country" class="form-label">Pais</label>
+							<select class="form-select is-valid border border-dark rounded" id="country" required onchange="cambia_provincia()">
+  							<option value="0" selected>Seleccione pais</option>
+  							<option value="1">España</option>
+  							<option value="2">Portugal</option>
+  							</select>
+  						<label class="text-danger">Seleccione un pais</label>
+  							<div class="valid-feedback">
+      						Pais ok!!!
+    						</div>
+    						<div class="invalid-feedback">
+      						Pais erroneo!!!
+    						</div>
 						</div>
-					</div>
-					</br>
-					
+					</div></br>					
 					<div class="row">
 						<div class="col-3">
-						<label>Delegacion origen</label>
-						<input class="border border-dark rounded" type="text" id="delegationorigin" name="delegationorigin" th:value="#{view.delegation.delegationorigin}">
+						<label for="delegationorigin" class="form-label">Delegacion origen</label>
+						<input type="text" class="form-do is-valid border border-dark rounded" id="delegationorigin" required th:value="#{view.delegation.delegationorigin}">
+						<label class="text-danger">Selecciona delegacion</label>
+							<div class="valid-feedback">
+      						Delegacion origen ok!!!
+    						</div>
+    						<div class="invalid-feedback">
+      						Delegacion origen erronea!!!
+    						</div>
 						</div>
 						<div class="col-3 offset-5">
-						<label>Delegacion destino</label>
-						<input class="border border-dark rounded"  type="text" id="delegationdestiny" placeholder="Introduce 3 digitos" maxlength="3" name="delegationdestiny" th:value="#{view.delegation.delegationdestiny}">
+						<label for="delegationdestiny" class="form-label">Delegacion destino</label>
+						<input type="text" class="form-dd is-valid border border-dark rounded"  id="delegationdestiny" placeholder="Introduce 3 digitos" maxlength="3" th:value="#{view.delegation.delegationdestiny}">
+						<label class="text-danger">Codigo 3 digitos</label>
+							<div class="valid-feedback">
+      						Delegacion destino ok!!!
+    						</div>
+    						<div class="invalid-feedback">
+      						Delegacion destino erronea!!!
+    						</div>
 						</div>
 					</div>
-					</br>
-				</div></br>
-				
+					</div></br>
+							
 			<h3 th:text="#{view.delegation.subtitle2}" class="bg-danger text-white rounded-3"></h3>
 				<div class="container-fluid border border-success rounded-3">
 					<div class="row">
@@ -79,14 +103,11 @@
 					<div class="row">
 						<div class="col-5">
 						<label>Provincia</label>
-						<select class="form-select border border-dark rounded col" name="provincia">
-	  						
-	  						<option value="-">Seleccione una provincia		
-	  									 						
+						<select class="form-select border border-dark rounded col" name="provincia">	  						
+	  						<option value="-">Seleccione una provincia	  									 						
 						</select>
 						</div>
-					</div></br>
-										
+					</div></br>										
 					<div class="row">
 						<div class="col-3">
 						<label>Nif/dni</label>
@@ -97,8 +118,7 @@
 						<label>Horario atencion</label>
 						<input class="border border-dark rounded" type="text" id="time" name="time" th:value="#{view.delegation.time}">
 						</div>
-					</div></br>
-					
+					</div></br>					
 					<div class="row">
 						<div class="col-3">
 						<label>Geo latitud</label>
@@ -118,8 +138,7 @@
 						<label>recoger</label>
 						<input type="checkbox" id="recoger" name="recoger">
 						</div>
-					</div></br>
-					
+					</div></br>					
 				</div></br>
 			<h3 th:text="#{view.delegation.subtitle3}" class="bg-danger text-white rounded-3"></h3>
 					<div class="container-fluid border border-success rounded-3">
@@ -190,7 +209,8 @@
 						</div>
 					</div></br>
 					</div>
-					</form></br>
+			</form>
+			</br>
 	</div>
 	<div class="d-flex justify-content-end">
 	<button type="button" class="btn btn-light rounded-3">Cancelar</button>
@@ -277,6 +297,32 @@
 	   }
 	}
   
+ </script>
+ 
+<!--  validacion de formularios -->
+ <script>
+//Example starter JavaScript for disabling form submissions if there are invalid fields
+ (function () {
+   'use strict'
+
+   // Fetch all the forms we want to apply custom Bootstrap validation styles to
+   var forms = document.querySelectorAll('.needs-validation')
+
+   // Loop over them and prevent submission
+   Array.prototype.slice.call(forms)
+     .forEach(function (form) {
+       form.addEventListener('submit', function (event) {
+         if (!form.checkValidity()) {
+           event.preventDefault()
+           event.stopPropagation()
+         }
+
+         form.classList.add('was-validated')
+       }, false)
+     })
+ })()
+ 
+ 
  </script>
 	
 </body>

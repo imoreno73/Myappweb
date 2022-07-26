@@ -2,6 +2,8 @@ package es.cex.dto;
 
 import java.util.Date;
 
+import javax.validation.constraints.*;
+
 /**
  * Class with delegaciones DTO
  */
@@ -14,20 +16,34 @@ public class DelegacionesDto extends ErrorDto {
 	private static final long serialVersionUID = 5427417224248907488L;
 
 	private Long id;
+	
 	private String name;
 	private String slug;
+	@NotEmpty
 	private Date opendate;
+	@NotEmpty
 	private String country;
+	@NotEmpty
 	private String delegationorigin;
+	@NotEmpty
 	private String delegationdestiny;
+	@NotEmpty
 	private String namedelegation;
+	@NotEmpty
 	private String adress;
+	@NotEmpty
 	private String city;
+	@NotNull
 	private int cp;
+	@NotEmpty
 	private String province;
+	@NotEmpty
 	private String dni;
+	@NotNull
 	private double geolat;
+	@NotNull
 	private double geolong;
+	@NotEmpty
 	private String time;
 	
 	
