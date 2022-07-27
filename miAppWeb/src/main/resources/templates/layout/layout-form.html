@@ -20,12 +20,12 @@
 	    </div>
 			<h2 th:text="#{view.delegation.title}" class="bg-secondary text-primary text-center rounded-3"></h2>
 			<br>
-			<form name="f1" class="was-validated">			
+			<form name="f1" action="/action.php" class="was-validated">			
 			<h3 th:text="#{view.delegation.subtitle1}" class="bg-danger text-white rounded-3"></h3>			
 				<div class="container-fluid border border-success rounded-3">
 					<div class="row">
 						<div class="col-3">
-						<label for="opendate" class="form-label">Fecha apertura</label>
+						<label for="opendate" class="form-opendate">Fecha apertura</label>
 							<input type="date" class="form-control is-valid border border-dark rounded" id="opendate" name="#{view.delegation.opendate}" required 
 							min="1945-01-01" max="2022-12-31">
 						<label class="text-danger">Introduzca una Fecha</label>
@@ -37,9 +37,9 @@
     						</div>
 						</div>
 						<div class="col-3 offset-5">
-						<label for="country" class="form-label">Pais</label>
-							<select class="form-select is-valid border border-dark rounded" id="country" onchange="cambia_provincia()" required>
-  							<option value="0" class="is-invalid">Seleccione pais</option>
+						<label for="country" class="form-country">Pais</label>
+							<select class="form-select border border-dark rounded" required id="country" onchange="cambia_provincia()">
+  							<option value="">Seleccione pais</option>
   							<option value="1">España</option>
   							<option value="2">Portugal</option>
   							</select>
@@ -54,8 +54,8 @@
 					</div></br>					
 					<div class="row">
 						<div class="col-3">
-						<label for="delegationorigin" class="form-label">Delegacion origen</label>
-						<input type="text" class="form-control is-valid border border-dark rounded" id="delegationorigin" required th:value="#{view.delegation.delegationorigin}">
+						<label for="delegationorigin" class="form-delegationorigin">Delegacion origen</label>
+						<input type="text" class="form-control is-valid border border-dark rounded" id="delegationorigin" required>
 						<label class="text-danger">Selecciona delegacion</label>
 							<div class="valid-feedback">
       						Delegacion origen ok!!!
@@ -65,8 +65,8 @@
     						</div>
 						</div>
 						<div class="col-3 offset-5">
-						<label for="delegationdestiny" class="form-label">Delegacion destino</label>
-						<input type="text" class="form-control is-valid border border-dark rounded"  id="delegationdestiny" placeholder="Introduce 3 digitos" maxlength="3" th:value="#{view.delegation.delegationdestiny}" required>
+						<label for="delegationdestiny" class="form-delegationdestiny">Delegacion destino</label>
+						<input type="text" class="form-control is-valid border border-dark rounded"  id="delegationdestiny" minlength="3" maxlength="3" required>
 						<label class="text-danger">Codigo 3 digitos</label>
 							<div class="valid-feedback">
       						Delegacion destino ok!!!
@@ -99,13 +99,16 @@
 						<label>CP</label>
 						<input class="border border-dark rounded" type="text" id="cp" name="cp" th:value="#{view.delegation.cp}" onchange="validarCodigoPostal()">
 						</div>
-					</div></br>
+					</div></br>		
 					<div class="row">
 						<div class="col-5">
-						<label>Provincia</label>
-						<select class="form-select border border-dark rounded col" name="provincia">	  						
-	  						<option value="-">Seleccione una provincia	  									 						
+						<label for="provincia" class="form-provincia">Provincia</label>
+						<select class="form-select is-valid border border-dark rounded col-4" id="provincia" required>	
+							<option value="">Seleccione una provincia</option>  						  									 						
 						</select>
+						<label class="text-danger">Escoja una provincia</label>
+						<div class="valid-feedback">Provincia ok!!!</div>
+    					<div class="invalid-feedback">Provincia erronea!!!</div>
 						</div>
 					</div></br>										
 					<div class="row">
@@ -222,7 +225,7 @@
 	</br>	
 	
 <script>
-  var provincias_1=new Array("-","Asturias","Albacete","Alicante","Almeria","Alava","Avila",
+  var provincias_1=new Array("Asturias","Albacete","Alicante","Almeria","Alava","Avila",
 		  "Badajoz","Baleares","Barcelona","Bizkaia","Burgos","Caceres","Cadiz","Cantabria",
 		  "Castellon","Ciudad real","Cordoba","La Coruña","Cuenca","Guipuzkoa","Girona",
 		  "Granada","Guadalajara","Huelva","Huesca","Jaen","Leon","Lleida","Lugo","Madrid",
@@ -231,7 +234,7 @@
 		  "Toledo","Valencia","Valladolid","Zamora","Zaragoza","Ceuta","Melilla");
 					
 
-  var provincias_2=new Array("-","Valença","Viana","Braga","Barcelos","Guimarães","Porto",
+  var provincias_2=new Array("Valença","Viana","Braga","Barcelos","Guimarães","Porto",
 		  "Penafiel","Bragança","Miranda","Moncorvo","Vila Real","Feira","Aveiro","Lamego",
 		  "trancoso","Pinhel","Guarda","Linhares","Viseu","Castelo branco","Arganil","Coimbra",
 		  "Leiria","Ourem","Cinco Vilas","Tomar","Santarém","Alcobaça","Alenquer",
