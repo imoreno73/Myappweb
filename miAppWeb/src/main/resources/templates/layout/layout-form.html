@@ -24,19 +24,14 @@
 			<h3 th:text="#{view.delegation.subtitle1}" class="bg-danger text-white rounded-3"></h3>			
 				<div class="container-fluid border border-success rounded-3">
 					<div class="row">
-						<div class="col-3">
+						<div class="col-4">
 						<label for="opendate" class="form-opendate">Fecha apertura</label>
-							<input type="date" class="form-control is-valid border border-dark rounded" id="opendate" name="#{view.delegation.opendate}" required 
-							min="1945-01-01" max="2022-12-31">
-						<label class="text-danger">Introduzca una Fecha</label>
-							<div class="valid-feedback">
-      						Fecha ok!!!
-    						</div>
-    						<div class="invalid-feedback">
-      						Fecha erronea!!!
-    						</div>
+							<input type="date" class="form-control is-valid border border-dark rounded" id="opendate" required min="1900-01-01" max="2025-12-31">
+							<label class="text-danger">Introduzca una Fecha</label>
+<!-- 							<div class="valid-feedback">Fecha ok!!!</div> -->
+    						<div class="invalid-feedback">Fecha erronea!!!</div>
 						</div>
-						<div class="col-3 offset-5">
+						<div class="col-4 offset-3">
 						<label for="country" class="form-country">Pais</label>
 							<select class="form-select border border-dark rounded" required id="country" onchange="cambia_provincia()">
   							<option value="">Seleccione pais</option>
@@ -44,104 +39,116 @@
   							<option value="2">Portugal</option>
   							</select>
   						<label class="text-danger">Seleccione un pais</label>
-  							<div class="valid-feedback">
-      						Pais ok!!!
-    						</div>
-    						<div class="invalid-feedback">
-      						Pais erroneo!!!
-    						</div>
+    						<div class="invalid-feedback">Seleccione una opcion, Pais erroneo!!!</div>
 						</div>
-					</div></br>					
+					</div></br>										
 					<div class="row">
-						<div class="col-3">
+						<div class="col-4">
 						<label for="delegationorigin" class="form-delegationorigin">Delegacion origen</label>
 						<input type="text" class="form-control is-valid border border-dark rounded" id="delegationorigin" required>
-						<label class="text-danger">Selecciona delegacion</label>
-							<div class="valid-feedback">
-      						Delegacion origen ok!!!
-    						</div>
-    						<div class="invalid-feedback">
-      						Delegacion origen erronea!!!
-    						</div>
+						<label class="text-danger">Introduce delegacion</label>
+<!-- 							<div class="valid-feedback">Delegacion origen ok!!!</div> -->
+    						<div class="invalid-feedback">Delegacion origen erronea!!!</div>
 						</div>
-						<div class="col-3 offset-5">
+						<div class="col-4 offset-3">
 						<label for="delegationdestiny" class="form-delegationdestiny">Delegacion destino</label>
 						<input type="text" class="form-control is-valid border border-dark rounded"  id="delegationdestiny" minlength="3" maxlength="3" required>
-						<label class="text-danger">Codigo 3 digitos</label>
-							<div class="valid-feedback">
-      						Delegacion destino ok!!!
-    						</div>
-    						<div class="invalid-feedback">
-      						Delegacion destino erronea!!!
-    						</div>
+						<label class="text-danger">Introduce 3 digitos</label>
+<!-- 							<div class="valid-feedback">Delegacion destino ok!!!</div> -->
+    						<div class="invalid-feedback">Delegacion destino erronea!!!</div>
 						</div>
 					</div>
-					</div></br>
-							
+					</div></br>							
 			<h3 th:text="#{view.delegation.subtitle2}" class="bg-danger text-white rounded-3"></h3>
 				<div class="container-fluid border border-success rounded-3">
 					<div class="row">
-						<div class="col-3">
-						<label>Nombre delegacion</label>
-						<input class="border border-dark rounded" type="text" id="delegationname" name="delegationname" th:value="#{view.delegation.namedelegation}">
-						</div>
-						<div class="col-3 offset-5">
-						<label>Direccion</label>
-						<input class="border border-dark rounded" type="text" id="delegationadress" name="delegationadress" th:value="#{view.delegation.adress}">
+						<div class="col-4">
+						<label for="delegationname" class="form-delegationname">Nombre delegacion</label>
+						<input type="text" class="form-control is-valid border border-dark rounded"  id="delegationname" required>
+						<label class="text-danger">Introduce nombre delegacion</label>
+<!-- 						<div class="valid-feedback">Nombre ok!!!</div> -->
+    					<div class="invalid-feedback">Nombre erroneo!!!</div>
+						</div>				
+						<div class="col-4 offset-3">
+						<label for="delegationadress" class="form-delegationadress">Direccion</label>
+						<input type="text" class="form-control is-valid border border-dark rounded"  id="delegationadress" required>
+						<label class="text-danger">Introduce una direccion</label>
+<!-- 						<div class="valid-feedback">Direccion ok!!!</div> -->
+    					<div class="invalid-feedback">Direccion erronea!!!</div>
 						</div>
 					</div></br>
 					<div class="row">
-						<div class="col-3">
-						<label>Poblacion</label>
-						<input class="border border-dark rounded" type="text" id="city" name="city" th:value="#{view.delegation.city}">
+						<div class="col-4">
+						<label for="city" class="form-city">Poblacion</label>
+						<input type="text" class="form-control is-valid border border-dark rounded" id="city" required>
+						<label class="text-danger">Introduce una poblacion</label>
+<!-- 						<div class="valid-feedback">Poblacion ok!!!</div> -->
+    					<div class="invalid-feedback">Poblacion erronea!!!</div>
 						</div>
-						<div class="col-3 offset-5">
-						<label>CP</label>
-						<input class="border border-dark rounded" type="text" id="cp" name="cp" th:value="#{view.delegation.cp}" onchange="validarCodigoPostal()">
+						<div class="col-4 offset-3">
+						<label for="cp" class="form-cp">CP</label>
+						<input class="form-control is-valid border border-dark rounded" type="text" id="cp" required onchange="validarCodigoPostal()">
+						<label class="text-danger">Introduce CP de 5 digitos </label>
+<!-- 						<div class="valid-feedback">Codigo postal ok!!!</div> -->
+    					<div class="invalid-feedback">Codigo postal erroneo!!!</div>
 						</div>
 					</div></br>		
 					<div class="row">
-						<div class="col-5">
+						<div class="col-4">
 						<label for="provincia" class="form-provincia">Provincia</label>
 						<select class="form-select is-valid border border-dark rounded col-4" id="provincia" required>	
-							<option value="">Seleccione una provincia</option>  						  									 						
+						<option value="">Seleccione una provincia</option>  						  									 						
 						</select>
 						<label class="text-danger">Escoja una provincia</label>
-						<div class="valid-feedback">Provincia ok!!!</div>
+<!-- 					<div class="valid-feedback">Provincia ok!!!</div> -->
     					<div class="invalid-feedback">Provincia erronea!!!</div>
 						</div>
 					</div></br>										
 					<div class="row">
-						<div class="col-3">
-						<label>Nif/dni</label>
+						<div class="col-5">
+						<label for="dni" class="form-dni">Nif/Dni</label>
 						<input type="text" name="dni" id="dni" placeholder="DNI" maxlength="9" tabindex="4" 
-						class="input-2 border border-dark rounded" onchange="nif()" onkeypress="return soloLetrasNumeros(event);">
+						class="form-control is-valid input-2 border border-dark rounded" required onchange="nif()" onkeypress="return soloLetrasNumeros(event);">
+						<label class="text-danger">Introduce Nif/Dni con formato 99999999X</label>
+<!-- 						<div class="valid-feedback">Nif/Dni ok!!!</div> -->
+    					<div class="invalid-feedback">Nif/Dni erroneo!!!</div>
 						</div>
-						<div class="col-3 offset-5">
-						<label>Horario atencion</label>
-						<input class="border border-dark rounded" type="text" id="time" name="time" th:value="#{view.delegation.time}">
+						<div class="col-4 offset-2">
+						<label for="time" class="form-time">Horario atencion</label>
+						<input type="time"  class="form-control is-valid border border-dark rounded" min="00:00" max="99:99" id="time-open" required></br>
+						<input type="time"  class="form-control is-valid border border-dark rounded" min="00:00" max="99:99" id="time-closed" required>
+						<label class="text-danger">Introduce horario formato 24H</label>
+<!-- 						<div class="valid-feedback">Hora ok!!!</div> -->
+    					<div class="invalid-feedback">Hora erronea!!!</div>
 						</div>
 					</div></br>					
 					<div class="row">
-						<div class="col-3">
-						<label>Geo latitud</label>
-						<input class="border border-dark rounded" type="text" id="geolat" name="geolat" th:value="#{view.delegation.geolat}">
+						<div class="col-4">
+						<label for="geolat" class="form-geolat">Geo latitud</label>
+						<input type="text" class="form-control is-valid border border-dark rounded" id="geolat" required>
+						<label class="text-danger">Introduce latitud</label>
+<!-- 						<div class="valid-feedback">latitud ok!!!</div> -->
+    					<div class="invalid-feedback">latitud erronea!!!</div>
 						</div>
-						<div class="col-3 offset-5">
-						<label>Geo longitud</label>
-						<input class="border border-dark rounded" type="text" id="geolong" name="geolong" th:value="#{view.delegation.geolong}">
+						<div class="col-4 offset-3">
+						<label for="geolong" class="form-geolong">Geo longitud</label>
+						<input type="text" class="form-control is-valid border border-dark rounded" id="geolong" required>
+						<label class="text-danger">Introduce longitud</label>
+<!-- 						<div class="valid-feedback">longitud ok!!!</div> -->
+    					<div class="invalid-feedback">longitud erronea!!!</div>
 						</div>
 					</div></br>					
 					<div class="row">
 						<div class="col-4">
 						<label>reexpedir</label>
-						<input type="checkbox" id="reexpedir" name="reexpedir">
+						<input class="form-check-input is-valid" type="checkbox" id="reexpedir" value="" required>
 						</div>
-						<div class="col-4 offset-4">
+						<div class="col-4 offset-3">
 						<label>recoger</label>
-						<input type="checkbox" id="recoger" name="recoger">
+						<input class="form-check-input is-valid" type="checkbox" id="recojer" value="" required>
 						</div>
-					</div></br>					
+					</div></br>
+					<div class="form-group"> 
 				</div></br>
 			<h3 th:text="#{view.delegation.subtitle3}" class="bg-danger text-white rounded-3"></h3>
 					<div class="container-fluid border border-success rounded-3">
@@ -149,13 +156,13 @@
 						<div class="col">
 							<label>Alta usuario</label>
 							<div class="input-group">							
-  							<textarea class="form-control" aria-label="Alta usuarios"></textarea>
+  							<textarea autocomplete="on" class="form-control is-valid" aria-label="Alta usuarios" required></textarea>
 							</div>
 						</div>
 						<div class="col">
 							<label>Alta conductores</label>
 							<div class="input-group">							
-  							<textarea class="form-control" aria-label="Alta usuarios"></textarea>
+  							<textarea autocomplete="on" class="form-control is-valid" aria-label="Alta conductores" required></textarea>
 							</div>
 						</div>
 					</div></br>
@@ -163,13 +170,13 @@
 						<div class="col">
 							<label>Alta usuario SGP</label>
 							<div class="input-group">							
-  							<textarea class="form-control" aria-label="Alta usuarios SGP"></textarea>
+  							<textarea autocomplete="on" class="form-control is-valid" aria-label="Alta usuarios SGP" required></textarea>
 							</div>
 						</div>
 						<div class="col">
 							<label>Alta usuario supervisores SGP</label>
 							<div class="input-group">							
-  							<textarea class="form-control" aria-label="Alta usuarios supervisores SGP"></textarea>
+  							<textarea autocomplete="on" class="form-control is-valid" aria-label="Alta usuario supervisores SGP" required></textarea>
 							</div>
 						</div>
 					</div></br>
@@ -177,7 +184,7 @@
 						<div class="col-6">
 							<label>Alta rutas SGP</label>
 							<div class="input-group">							
-  							<textarea class="form-control" aria-label="Alta rutas SGP"></textarea>
+  							<textarea autocomplete="on" class="form-control is-valid" aria-label="Alta rutas SGP" required></textarea>
 							</div>
 						</div></div></br>
 					</div></br>
@@ -187,13 +194,13 @@
 						<div class="col">
 							<label>CP a migrar</label>
 							<div class="input-group">							
-  							<textarea class="form-control" aria-label="CP a migrar"></textarea>
+  							<textarea autocomplete="on" class="form-control is-valid" aria-label="CP a migrar" required></textarea>
 							</div>
 						</div>
 						<div class="col">
 							<label>Rutas a migrar SGP</label>
 							<div class="input-group">							
-  							<textarea class="form-control" aria-label="Rutas a migrar SGP"></textarea>
+  							<textarea autocomplete="on" class="form-control is-valid" aria-label="Rutas a migrar SGP" required></textarea>
 							</div>
 						</div>
 					</div></br>
@@ -201,13 +208,13 @@
 						<div class="col">
 							<label>Clientes a migrar</label>
 							<div class="input-group">							
-  							<textarea class="form-control" aria-label="Clientes a migrar"></textarea>
+  							<textarea autocomplete="on" class="form-control is-valid" aria-label="Clientes a migrar" required></textarea>
 							</div>
 						</div>
 						<div class="col">
 							<label>Equivalencia conductores</label>
 							<div class="input-group">							
-  							<textarea class="form-control" aria-label="Equivalencia conductores"></textarea>
+  							<textarea autocomplete="on" class="form-control is-valid" aria-label="Equivalencia conductores" required></textarea>
 							</div>
 						</div>
 					</div></br>
