@@ -40,6 +40,8 @@ import es.cex.service.IDelegacionesService;
  * Controlador para usuarios
  */
 @Controller
+
+
 @RequestMapping(MappingConstant.DELEGACIONES_ROOT)
 public class DelegacionesController extends BaseController {
 
@@ -71,6 +73,18 @@ public class DelegacionesController extends BaseController {
 
 		return ViewsConstant.VIEW_DELEGACIONES_SEARCH_PAGE;
 	}
+	
+	//controlador para submit form?
+	
+	/*
+	 * @GetMapping("/delegaciones") public String delegacionesForm(Model model) {
+	 * model.addAttribute("delegaciones", new Delegaciones()); return
+	 * "delegaciones"; }
+	 * 
+	 * @PostMapping("/delegaciones") public String
+	 * delegacionesSubmit(@ModelAttribute delegaciones Delegaciones, Model model) {
+	 * model.addAttribute("delegaciones", delegaciones); return "result"; }
+	 */
 }
 
 

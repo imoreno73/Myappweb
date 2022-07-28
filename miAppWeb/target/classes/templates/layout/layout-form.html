@@ -87,7 +87,7 @@
 						</div>
 						<div class="col-4 offset-3">
 						<label for="cp" class="form-cp">CP</label>
-						<input class="form-control is-valid border border-dark rounded" type="text" id="cp" required onchange="validarCodigoPostal()">
+						<input class="form-control is-valid border border-dark rounded" type="text" id="cp" maxlenght="5" required onchange="validarCodigoPostal()">
 						<label class="text-danger">Introduce CP de 5 digitos </label>
 <!-- 						<div class="valid-feedback">Codigo postal ok!!!</div> -->
     					<div class="invalid-feedback">Codigo postal erroneo!!!</div>
@@ -214,7 +214,7 @@
 						<div class="col">
 							<label>Equivalencia conductores</label>
 							<div class="input-group">							
-  							<textarea autocomplete="on" class="form-control is-valid" aria-label="Equivalencia conductores" required></textarea>
+  							<textarea autocomplete="on" class="form-control is-valid" id="equivalencia" onchange="comprobar()" maxlenght="5" aria-label="Equivalencia conductores" required></textarea>
 							</div>
 						</div>
 					</div></br>
@@ -307,6 +307,28 @@
 	   }
 	}
   
+  function comprobar(equivalencia){
+	  equivalencia = document.getElementById("equivalencia").value;
+	  var ex_regular_equivalencia; 
+	  ex_regular_equivalencia = /[0-9]{2}-[0-9]{2}?/g;
+	  if(ex_regular_equivalencia.test (equivalencia) == true){
+	       alert('Equivalencia conductores corresponde');
+	  }else{
+	     alert('Equivalencia conductores erronea, formato no válido');
+	   }
+	}
+  
+  function soloLetrasNumeros(e){
+		var tecla = (document.all) ? e.keyCode : e.which;
+	    //Permitimos el acceso a una tecla "Retroceso".  <--
+	    if (tecla == 8){
+	        return true;
+	    }
+		//Patrón de entrada: solo aceptamos números.
+	    var patron = /[0-9A-Za-z]/;
+	    var tecla_final = String.fromCharCode(tecla);
+	    return patron.test(tecla_final);
+	}
  </script>
  
 <!--  validacion de formularios -->
