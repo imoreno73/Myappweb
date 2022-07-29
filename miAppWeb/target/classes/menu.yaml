@@ -5,7 +5,7 @@ menu:
     - 
       anonymous: true
       type: local
-      icon: home
+      icon: domain_add
       link: /delegaciones
       name: "Delegaciones"
       showName: false
