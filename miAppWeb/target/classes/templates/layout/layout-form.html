@@ -157,7 +157,7 @@
 						<div class="col">
 							<label>Alta usuario</label>
 							<div class="input-group">							
-  							<textarea autocomplete="on" class="form-control is-valid" aria-label="Alta usuarios" required></textarea>
+  							<textarea autocomplete="on" class="form-control is-valid" id="highuser" onchange="comas()"aria-label="Alta usuarios" required></textarea>
 							</div>
 						</div>
 						<div class="col">
@@ -331,6 +331,17 @@
 	   }
 	}
   
+  function comas(highuser){
+	  highuser = document.getElementById("highuser").value;
+	  var ex_regular_highuser; 
+	  ex_regular_highuser = /(.,*)\s(.,*)/g;
+	  if(ex_regular_highuser.test (highuser) == true){
+	       alert('Alta usuarios correcta');
+	  }else{
+	     alert(' erronea, formato no válido');
+	   }
+	}
+  
   function soloLetrasNumeros(e){
 		var tecla = (document.all) ? e.keyCode : e.which;
 	    //Permitimos el acceso a una tecla "Retroceso".  <--
@@ -342,6 +353,8 @@
 	    var tecla_final = String.fromCharCode(tecla);
 	    return patron.test(tecla_final);
 	}
+  
+  
  </script>
  
 <!--  validacion de formularios -->
