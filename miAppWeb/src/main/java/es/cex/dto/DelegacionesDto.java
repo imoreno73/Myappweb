@@ -44,7 +44,9 @@ public class DelegacionesDto extends ErrorDto {
 	@NotNull
 	private double geolong;
 	@NotEmpty
-	private String time;
+	private String time_open;
+	@NotEmpty
+	private String time_closed;
 	
 	
     public String getDelegationorigin() {
@@ -102,6 +104,22 @@ public class DelegacionesDto extends ErrorDto {
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
+	
+	public String getTime_open() {
+		return time_open;
+	}
+
+	public void setTime_open(String time_open) {
+		this.time_open = time_open;
+	}
+
+	public String getTime_closed() {
+		return time_closed;
+	}
+
+	public void setTime_closed(String time_closed) {
+		this.time_closed = time_closed;
+	}
 
 	public double getGeolat() {
 		return geolat;
@@ -119,13 +137,7 @@ public class DelegacionesDto extends ErrorDto {
 		this.geolong = geolong;
 	}
 
-	public String getTime() {
-		return time;
-	}
-
-	public void setTime(String time) {
-		this.time = time;
-	}
+	
 
 		public DelegacionesDto(Long id) {
             this.id = id;
