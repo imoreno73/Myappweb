@@ -5,7 +5,7 @@ menu:
     - 
       anonymous: true
       type: local
-      icon: domain_add
+      icon: domain add
       link: /delegaciones
       name: "Delegaciones"
       showName: false
@@ -52,7 +52,7 @@ menu:
     - 
       anonymous: true
       type: local
-      icon: home
+      icon: domain add
       link: /delegaciones
       name: "(pt) Delegaciones"
       showName: false
@@ -99,7 +99,7 @@ menu:
     - 
       anonymous: true
       type: local
-      icon: home
+      icon: domain add
       link: /delegaciones
       name: "(en) Delegaciones"
       showName: false

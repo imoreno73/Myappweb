@@ -86,9 +86,9 @@
     					<div class="invalid-feedback">Poblacion erronea!!!</div>
 						</div>
 						<div class="col-4 offset-3">
-						<label for="cp" class="form-cp">CP</label>
-						<input class="form-control is-valid border border-dark rounded" type="text" id="cp" maxlenght="5" required onchange="validarCodigoPostal()">
-						<label class="text-danger">Introduce CP de 5 digitos </label>
+						<label for="cp" class="form-cp">CP España/Portugal</label>
+						<input class="form-control is-valid border border-dark rounded" type="text" id="cp" minlenght="5" maxlenght="8" required onchange="validarCodigoPostal()">
+						<label class="text-danger">Introduce CP de 5/8 digitos</label>
 <!-- 						<div class="valid-feedback">Codigo postal ok!!!</div> -->
     					<div class="invalid-feedback">Codigo postal erroneo!!!</div>
 						</div>
@@ -288,14 +288,25 @@
   function validarCodigoPostal()
   {
     var input = document.getElementById("cp").value;
+    var cp = document.getElementById("cp").value;
     console.log(parseInt(input))
     if(input.length == 5 && parseInt(input) >= 1000 && parseInt(input) <= 52999)
-    {
-      alert("codigo valido");
-    }
-    else{
-      alert("codigo invalido");
-     }
+    	{
+      	alert("codigo postal correcto");
+    	}
+    
+    if (cp.length == 8 && cp.lenth !=5)
+		{		  	
+		var ex_regular_cp; 
+		ex_regular_cp = /[0-9]{4}-[0-9]{3}?/g;
+		if(ex_regular_cp.test (cp) == true)
+			{
+			alert('Codigo postal correcto');
+			}
+		else{
+    		alert("codigo postal invalido");
+     		}  
+    	}
   }  
  
   function nif(dni){
