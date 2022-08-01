@@ -1,5 +1,6 @@
 package es.cex.controller;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
@@ -35,6 +36,7 @@ import es.cex.dto.DelegacionesDto;
 import es.cex.dto.DelegacionesPaginatedRequestDto;
 import es.cex.dto.PaginationDto;
 import es.cex.service.IDelegacionesService;
+import org.springframework.ui.Model;
 
 /**
  * Controlador para usuarios
@@ -85,6 +87,21 @@ public class DelegacionesController extends BaseController {
 	 * delegacionesSubmit(@ModelAttribute delegaciones Delegaciones, Model model) {
 	 * model.addAttribute("delegaciones", delegaciones); return "result"; }
 	 */
+	
+	@Controller
+	public class MainController {
+	     
+	    @GetMapping("/register")
+	    public String showForm(Model model) {
+	        DelegacionesForm delegacionesform = new DelegacionesForm();
+	        model.addAttribute("user", delegacionesform);
+	         
+	        List<String> listDelegacion = Arrays.asList("opendate", "country", "delegationorigin");
+	        model.addAttribute("listDelegacion", listDelegacion);
+	         
+	        return "register_form";
+	    }
+	}
 }
 
 
