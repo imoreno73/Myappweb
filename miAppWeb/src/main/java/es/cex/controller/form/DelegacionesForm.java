@@ -45,6 +45,31 @@ public class DelegacionesForm extends ErrorForm {
 	private String time_open;
 	@NotEmpty
 	private String time_closed;
+	@NotEmpty
+	private Boolean forward;
+	@NotEmpty
+	private Boolean pickup;
+	@NotEmpty
+	private String highuser;
+	@NotEmpty
+	private String highdrivers;
+	@NotEmpty
+	private String highusersgp;
+	@NotEmpty
+	private String highusersupervisorsgp;
+	@NotEmpty
+	private String highroutessgp;
+	@NotEmpty
+	private String cptomigrate;
+	@NotEmpty
+	private String routestomigratesgp;
+	@NotEmpty
+	private String clientstomigrate;
+	@NotEmpty
+	private String equivalence;
+	
+	
+	
 
 	public Date getOpendate() {
 		return opendate;
@@ -156,6 +181,94 @@ public class DelegacionesForm extends ErrorForm {
 
 	public void setTime_closed(String time_closed) {
 		this.time_closed = time_closed;
+	}
+
+	public Boolean getForward() {
+		return forward;
+	}
+
+	public void setForward(Boolean forward) {
+		this.forward = forward;
+	}
+
+	public Boolean getPickup() {
+		return pickup;
+	}
+
+	public void setPickup(Boolean pickup) {
+		this.pickup = pickup;
+	}
+
+	public String getHighuser() {
+		return highuser;
+	}
+
+	public void setHighuser(String highuser) {
+		this.highuser = highuser;
+	}
+
+	public String getHighdrivers() {
+		return highdrivers;
+	}
+
+	public void setHighdrivers(String highdrivers) {
+		this.highdrivers = highdrivers;
+	}
+
+	public String getHighusersgp() {
+		return highusersgp;
+	}
+
+	public void setHighusersgp(String highusersgp) {
+		this.highusersgp = highusersgp;
+	}
+
+	public String getHighusersupervisorsgp() {
+		return highusersupervisorsgp;
+	}
+
+	public void setHighusersupervisorsgp(String highusersupervisorsgp) {
+		this.highusersupervisorsgp = highusersupervisorsgp;
+	}
+
+	public String getHighroutessgp() {
+		return highroutessgp;
+	}
+
+	public void setHighroutessgp(String highroutessgp) {
+		this.highroutessgp = highroutessgp;
+	}
+
+	public String getCptomigrate() {
+		return cptomigrate;
+	}
+
+	public void setCptomigrate(String cptomigrate) {
+		this.cptomigrate = cptomigrate;
+	}
+
+	public String getRoutestomigratesgp() {
+		return routestomigratesgp;
+	}
+
+	public void setRoutestomigratesgp(String routestomigratesgp) {
+		this.routestomigratesgp = routestomigratesgp;
+	}
+
+	public String getClientstomigrate() {
+		return clientstomigrate;
+	}
+
+	public void setClientstomigrate(String clientstomigrate) {
+		this.clientstomigrate = clientstomigrate;
+	}
+
+	public String getEquivalence() {
+		return equivalence;
+	}
+
+	public void setEquivalence(String equivalence) {
+		this.equivalence = equivalence;
 	}
 
 	@NotEmpty(message = "view.delegaciones.error.name.empty")
