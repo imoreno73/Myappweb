@@ -96,18 +96,18 @@ public class DelegacionesController extends BaseController {
 	        DelegacionesForm delegacionesform = new DelegacionesForm();
 	        model.addAttribute("user", delegacionesform);
 	         
-	        List<String> listDelegacion = Arrays.asList("opendate", "country", "delegationorigin", "delegationdestiny", "namedelegation", "adress",
+	        List<String> listDelegacion = Arrays.asList("opendate", "country", "delegationorigin", "delegationdestiny", "namedelegation", "delegationadress",
 	        	"city", "cp", "province", "dni", "time_open", "time_closed", "geolat", "geolong", "forward", "pickup", "highuser", "highdrivers", 
 	        	"highusersgp", "highusersupervisorsgp", "highroutessgp", "cptomigrate", "routestomigrate", "clientstomigrate", "equivalence");
 	        model.addAttribute("listDelegacion", listDelegacion);
 	         
-	        return "layout_submit";
+	        return "layout-submit";
 	    }
 	    	       
 	    @PostMapping("/register")
 	    public String submitForm(@ModelAttribute("delegacionesform") DelegacionesForm delegacionesform) {
 	        System.out.println(delegacionesform);
-	        return "layout_submit";
+	        return "layout-submit";
 	    }
 //	}
 }

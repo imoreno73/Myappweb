@@ -23,12 +23,25 @@ public class DelegacionesForm extends ErrorForm {
 	private String country;
 	@NotEmpty
 	private String delegationorigin;
+	@Override
+	public String toString() {
+		return "DelegacionesForm [id=" + id + ", opendate=" + opendate + ", country=" + country + ", delegationorigin="
+				+ delegationorigin + ", delegationdestiny=" + delegationdestiny + ", namedelegation=" + namedelegation
+				+ ", adress=" + delegationadress + ", city=" + city + ", cp=" + cp + ", province=" + province + ", dni=" + dni
+				+ ", geolat=" + geolat + ", geolong=" + geolong + ", time_open=" + time_open + ", time_closed="
+				+ time_closed + ", forward=" + forward + ", pickup=" + pickup + ", highuser=" + highuser
+				+ ", highdrivers=" + highdrivers + ", highusersgp=" + highusersgp + ", highusersupervisorsgp="
+				+ highusersupervisorsgp + ", highroutessgp=" + highroutessgp + ", cptomigrate=" + cptomigrate
+				+ ", routestomigratesgp=" + routestomigratesgp + ", clientstomigrate=" + clientstomigrate
+				+ ", equivalence=" + equivalence + ", name=" + name + "]";
+	}
+
 	@NotEmpty
 	private String delegationdestiny;
 	@NotEmpty
 	private String namedelegation;
 	@NotEmpty
-	private String adress;
+	private String delegationadress;
 	@NotEmpty
 	private String city;
 	@NotNull
@@ -111,12 +124,12 @@ public class DelegacionesForm extends ErrorForm {
 		this.namedelegation = namedelegation;
 	}
 
-	public String getAdress() {
-		return adress;
+	public String getdelegationAdress() {
+		return delegationadress;
 	}
 
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setdelegationAdress(String delegationadress) {
+		this.delegationadress = delegationadress;
 	}
 
 	public String getCity() {

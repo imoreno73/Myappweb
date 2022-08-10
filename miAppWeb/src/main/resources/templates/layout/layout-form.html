@@ -20,7 +20,7 @@
 	    </div>
 			<h2 th:text="#{view.delegation.title}" class="bg-secondary text-primary text-center rounded-3"></h2>
 			<br>
-			<form name="f1" action="file:///C:/Myappwebgit/miAppWeb/src/main/resources/templates/layout/layout-submit.html" method="POST" class="was-validated">			
+			<form name="f1" action="@{/register}" method="POST" th:object="${delegacionesform}" class="was-validated">			
 			<h3 th:text="#{view.delegation.subtitle1}" class="bg-danger text-white rounded-3"></h3>			
 				<div class="container-fluid border border-success rounded-3">
 					<div class="row">
