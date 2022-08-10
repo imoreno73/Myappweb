@@ -12,34 +12,40 @@
 	<th:block th:insert="fragments/head/head :: app">[Head app]</th:block>	
 </head>
 
-<body>
+<body  class="overflow-y-auto">
+<div th:replace="fragments/headers/header">[Cabecera]</div>
+	<div class="container-fluid px-6 px-md-11 py-10">
+	<div class="row">
+	    	<nav th:replace="fragments/menu/navbar-menu">[Menu]</nav>	
+	 </div>
 <div align="center">
-	<h2>Registration Succeeded!</h2>
-	<span>Fecha apertura:</span><span th:text="${user.opendate}"></span><br/>
-	<span>Pais:</span><span th:text="${user.country}"></span><br/>
-	<span>Delegacion origen:</span><span th:text="${user.delegationorigin}"></span><br/>
-	<span>Delegacion destino:</span><span th:text="${user.delegationdestiny}"></span><br/>
-	<span>Nombre delegacion:</span><span th:text="${user.namedelegation}"></span><br/>
-	<span>Direccion:</span><span th:text="${user.adress}"></span><br/>
-	<span>Poblacion:</span><span th:text="${user.city}"></span><br/>
-	<span>CP España/Portugal:</span><span th:text="${user.cp}"></span><br/>
-	<span>Provincia:</span><span th:text="${user.province}"></span><br/>
-	<span>Nif/Dni:</span><span th:text="${user.dni}"></span><br/>
-	<span>Horario apertura:</span><span th:text="${user.time_open}"></span><br/>
-	<span>Horario cierre:</span><span th:text="${user.time_closed}"></span><br/>
-	<span>Latitud:</span><span th:text="${user.geolat}"></span><br/>
-	<span>Longitud:</span><span th:text="${user.geolong}"></span><br/>
-	<span>Reexpedir:</span><span th:text="${user.forward}"></span><br/>
-	<span>Recoger:</span><span th:text="${user.pickup}"></span><br/>
-	<span>Alta usuarios:</span><span th:text="${user.highuser}"></span><br/>
-	<span>Alta conductores:</span><span th:text="${user.highdrivers}"></span><br/>
-	<span>Alta usuarios SGP:</span><span th:text="${user.highusersgp}"></span><br/>
-	<span>Alta usuarios supervisores SGP:</span><span th:text="${user.highusersupervisorsgp}"></span><br/>
-	<span>Alta rutas SGP:</span><span th:text="${user.highroutessgp}"></span><br/>
-	<span>Alta CP a migrar:</span><span th:text="${user.cptomigrate}"></span><br/>
-	<span>Rutas a migrar SGP:</span><span th:text="${user.routestomigratesgp}"></span><br/>
-	<span>Clientes a migrar:</span><span th:text="${user.clientstomigrate}"></span><br/>
-	<span>Equivalencia conductores:</span><span th:text="${layout-form.equivalence}"></span><br/>
+	<h2 class="text-warning">Registration Succeeded!</h2>
+	<span>Fecha apertura:</span><span th:text="${DelegacionesForm.opendate.value}"></span><br/>
+	<span>Pais:</span><span th:text="${DelegacionesForm.country.value}"></span><br/>
+	<span>Delegacion origen:</span><span th:text="${DelegacionesForm.delegationorigin.value}"></span><br/>
+	<span>Delegacion destino:</span><span th:text="${DelegacionesForm.delegationdestiny.value}"></span><br/>
+	<span>Nombre delegacion:</span><span th:text="${DelegacionesForm.namedelegation.value}"></span><br/>
+	<span>Direccion:</span><span th:text="${DelegacionesForm.adress.value}"></span><br/>
+	<span>Poblacion:</span><span th:text="${DelegacionesForm.city.value}"></span><br/>
+	<span>CP España/Portugal:</span><span th:text="${DelegacionesForm.cp.value}"></span><br/>
+	<span>Provincia:</span><span th:text="${DelegacionesForm.province.value}"></span><br/>
+	<span>Nif/Dni:</span><span th:text="${DelegacionesForm.dni.value}"></span><br/>
+	<span>Horario apertura:</span><span th:text="${DelegacionesForm.time_open.value}"></span><br/>
+	<span>Horario cierre:</span><span th:text="${DelegacionesForm.time_closed.value}"></span><br/>
+	<span>Latitud:</span><span th:text="${DelegacionesForm.geolat.value}"></span><br/>
+	<span>Longitud:</span><span th:text="${DelegacionesForm.geolong.value}"></span><br/>
+	<span>Reexpedir:</span><span th:text="${DelegacionesForm.forward.value}"></span><br/>
+	<span>Recoger:</span><span th:text="${DelegacionesForm.pickup.value}"></span><br/>
+	<span>Alta usuarios:</span><span th:text="${DelegacionesForm.highuser.value}"></span><br/>
+	<span>Alta conductores:</span><span th:text="${DelegacionesForm.highdrivers.value}"></span><br/>
+	<span>Alta usuarios SGP:</span><span th:text="${DelegacionesForm.highusersgp.value}"></span><br/>
+	<span>Alta usuarios supervisores SGP:</span><span th:text="${DelegacionesForm.highusersupervisorsgp.value}"></span><br/>
+	<span>Alta rutas SGP:</span><span th:text="${DelegacionesForm.highroutessgp.value}"></span><br/>
+	<span>Alta CP a migrar:</span><span th:text="${DelegacionesForm.cptomigrate.value}"></span><br/>
+	<span>Rutas a migrar SGP:</span><span th:text="${DelegacionesForm.routestomigratesgp.value}"></span><br/>
+	<span>Clientes a migrar:</span><span th:text="${DelegacionesForm.clientstomigrate.value}"></span><br/>
+	<span>Equivalencia conductores:</span><span th:text="${DelegacionesForm.equivalence.value}"></span><br/>
+</div>
 </div>
 	
 </body>

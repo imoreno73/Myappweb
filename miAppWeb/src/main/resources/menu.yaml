@@ -45,7 +45,9 @@ menu:
       link: /pages
       name: "Páginas"
       showName: false
-      roles: ~    
+      roles: ~
+      
+      
       
   pt: 
 
@@ -83,7 +85,7 @@ menu:
       link: /functionalGroups
       name: "(pt) Grupos"
       showName: false
-      roles: ~ 
+      roles: ~
 
     - 
       anonymous: true
@@ -92,8 +94,9 @@ menu:
       link: /pages
       name: "(pt) Páginas"
       showName: false
-      roles: ~ 
-      
+      roles: ~       
+       
+
   en:
   
     - 
@@ -130,7 +133,7 @@ menu:
       name: "(en) Grupos"
       showName: false
       roles: ~ 
-
+  
     - 
       anonymous: true
       type: local
@@ -139,4 +142,6 @@ menu:
       name: "(en) Páginas"
       showName: false
       roles: ~ 
+
+  
       
