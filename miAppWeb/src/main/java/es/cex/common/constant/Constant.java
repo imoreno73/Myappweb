@@ -179,7 +179,7 @@ public final class Constant {
 	public static final String DELEGACIONES_FORM_URL_ATTRIBUTE_KEY = "formDelegacionesUrl";
 	
 	/** DELEGACIONES_FORM_URL_REGISTER **/
-	public static final String DELEGACIONES_FORM_REGISTER = "formDelegacionesregister";
+	public static final String DELEGACIONES_FORM_REGISTER = "register";
 
 	/**
 	 * Avoid class instance

@@ -121,8 +121,14 @@ public final class MappingConstant {
 	
 //	AÑADIDO PARA SUBMIT DE FORMULARIO
 	
-	/** DELEGACIONES_REGISTER */
-	public static final String DELEGACIONES_REGISTER = "/register";
+	/** REGISTER */
+	public static final String REGISTER_REGISTER = "/register";
+	
+	/** ROLE_ROOT */
+	public static final String REGISTER_ROOT = "/register";
+	
+	/** REGISTER_SEARCH */
+	public static final String REGISTER_SEARCH = "/search";
 
 
 	/** PAGE_ROOT */

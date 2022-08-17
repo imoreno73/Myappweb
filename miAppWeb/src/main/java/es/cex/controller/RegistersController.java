@@ -33,6 +33,7 @@ import es.cex.common.types.NotificationTypes;
 import es.cex.common.utils.CommonUtils;
 import es.cex.controller.form.DelegacionesForm;
 import es.cex.controller.form.DelegacionesSearchForm;
+import es.cex.controller.form.RegistersForm;
 import es.cex.dto.DelegacionesDto;
 import es.cex.dto.DelegacionesPaginatedRequestDto;
 import es.cex.dto.PaginationDto;
@@ -45,10 +46,10 @@ import org.springframework.ui.Model;
 @Controller
 
 
-@RequestMapping(MappingConstant.DELEGACIONES_ROOT)
-public class DelegacionesController extends BaseController {
+@RequestMapping(MappingConstant.REGISTER_ROOT)
+public class RegistersController extends BaseController {
 
-	private static final Logger LOG = LoggerFactory.getLogger(DelegacionesController.class);
+	private static final Logger LOG = LoggerFactory.getLogger(RegistersController.class);
 
 //	@Autowired
 //	private IDelegacionesService delegacionesService;
@@ -57,7 +58,7 @@ public class DelegacionesController extends BaseController {
 //	private CommonUtils commonUtils;
 
 	/**
-	 * Carga la página principal de delegaciones
+	 * Carga la página principal de registro
 	 *
 	 * @param request
 	 *            request
@@ -74,11 +75,31 @@ public class DelegacionesController extends BaseController {
 		//this.setHeadTitle(request, I18Constant.I18_VIEW_DELEGACIONES_HEAD_TITLE);
 		request.setAttribute(Constant.CEX_MENU_KEY, this.getMenu());
 
-		return ViewsConstant.VIEW_DELEGACIONES_SEARCH_PAGE;
+		return ViewsConstant.VIEW_REGISTER_REGISTER;
+		
 	}
+	
 
 	     
-
+	    @GetMapping("")
+	    public String showForm(Model model) {
+	        RegistersForm registersform = new RegistersForm();
+	        model.addAttribute("user", registersform);
+	         
+	        List<String> listDelegacion = Arrays.asList("opendate", "country", "delegationorigin", "delegationdestiny", "namedelegation", "delegationadress",
+	        	"city", "cp", "province", "dni", "time_open", "time_closed", "geolat", "geolong", "forward", "pickup", "highuser", "highdrivers", 
+	        	"highusersgp", "highusersupervisorsgp", "highroutessgp", "cptomigrate", "routestomigrate", "clientstomigrate", "equivalence");
+	        model.addAttribute("listDelegacion", listDelegacion);
+	         
+	        return "layout-submit";
+	    }
+	    	       
+	    @PostMapping("")
+	    public String submitForm(@ModelAttribute("registersform") RegistersForm registersform) {
+	        System.out.println(registersform);
+	        return "layout-submit";
+	    }
+//	}
 }
 
 
