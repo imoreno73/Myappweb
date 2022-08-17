@@ -118,6 +118,11 @@ public final class MappingConstant {
 
 	/** DELEGACIONES_DELETE */
 	public static final String DELEGACIONES_DELETE = "/delete/{id}";
+	
+//	AÑADIDO PARA SUBMIT DE FORMULARIO
+	
+	/** DELEGACIONES_REGISTER */
+	public static final String DELEGACIONES_REGISTER = "/register";
 
 
 	/** PAGE_ROOT */

@@ -9,6 +9,15 @@ menu:
       link: /delegaciones
       name: "Delegaciones"
       showName: false
+      roles: ~
+
+    - 
+      anonymous: true
+      type: local
+      icon: source
+      link: /register
+      name: "Registro"
+      showName: false
       roles: ~ 
 
     - 
@@ -58,7 +67,16 @@ menu:
       link: /delegaciones
       name: "(pt) Delegaciones"
       showName: false
-      roles: ~ 
+      roles: ~
+    
+    - 
+      anonymous: true
+      type: local
+      icon: source
+      link: /register
+      name: "(pt) Registro"
+      showName: false
+      roles: ~      
 
     - 
       anonymous: true
@@ -107,6 +125,16 @@ menu:
       name: "(en) Delegaciones"
       showName: false
       roles: ~ 
+
+    - 
+      anonymous: true
+      type: local
+      icon: source
+      link: /register
+      name: "(en) Registro"
+      showName: false
+      roles: ~ 
+
     - 
       anonymous: true
       type: local

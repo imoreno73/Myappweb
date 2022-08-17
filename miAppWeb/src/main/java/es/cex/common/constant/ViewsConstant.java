@@ -46,6 +46,9 @@ public final class ViewsConstant {
 
 	/** VIEW_DELEGACIONES_NEW_OR_EDIT_PAGE */
 	public static final String VIEW_DELEGACIONES_NEW_OR_EDIT_PAGE = "public/delegaciones/delegacionesNewOrEdit";
+	
+	/** VIEW_DELEGACIONES_REGISTER */
+	public static final String VIEW_DELEGACIONES_REGISTER = "public/delegaciones/register";
 
 	
 	
