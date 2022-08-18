@@ -121,6 +121,37 @@ public final class I18Constant {
 
 	/** I18_NOTIFICATIONS_DELEGACIONES_DELETE_ERROR */
 	public static final String I18_NOTIFICATIONS_DELEGACIONES_DELETE_ERROR = "view.notification.delegaciones.delete.error.text";
+	
+	
+	// añadimos REGISTER PARA SUBMIT FORM
+	
+		/** I18_VIEW_REGISTER_HEAD_TITLE */
+		public static final String I18_VIEW_REGISTER_HEAD_TITLE = "view.register.head.title";
+
+		/** I18_VIEW_REGISTER_NEW_TITLE **/
+		public static final String I18_REGISTER_NEW_TITLE = "view.register.new.title";
+
+		/** I18_VIEW_REGISTER_EDIT_TITLE **/
+		public static final String I18_REGISTER_EDIT_TITLE = "view.register.edit.title";
+
+		/** I18_VIEW_REGISTER_DETAILS_TITLE **/
+		public static final String I18_REGISTER_DETAILS_TITLE = "view.register.details.title";
+
+		/** I18_NOTIFICATIONS_REGISTER_TITLE */
+		public static final String I18_NOTIFICATIONS_REGISTER_TITLE = "view.notification.register.title";
+
+		/** I18_NOTIFICATIONS_REGISTER_CREATE_SUCCESS */
+		public static final String I18_NOTIFICATIONS_REGISTER_CREATE_SUCCESS = "view.notification.register.create.success.text";
+
+		/** I18_NOTIFICATIONS_REGISTER_UPDATE_SUCCESS */
+		public static final String I18_NOTIFICATIONS_REGISTER_UPDATE_SUCCESS = "view.notification.register.update.success.text";
+
+		/** I18_NOTIFICATIONS_REGISTER_DELETE_SUCCESS */
+		public static final String I18_NOTIFICATIONS_REGISTER_DELETE_SUCCESS = "view.notification.register.delete.success.text";
+
+		/** I18_NOTIFICATIONS_REGISTER_DELETE_ERROR */
+		public static final String I18_NOTIFICATIONS_REGISTER_DELETE_ERROR = "view.notification.register.delete.error.text";
+
 
 
 	/**

@@ -121,15 +121,37 @@ public final class MappingConstant {
 	
 //	AÑADIDO PARA SUBMIT DE FORMULARIO
 	
-	/** REGISTER */
-	public static final String REGISTER_REGISTER = "/register";
 	
 	/** ROLE_ROOT */
 	public static final String REGISTER_ROOT = "/register";
-	
+
+	/** REGISTER_ROOT */
+	public static final String REGISTER_LIST = "/list";
+
 	/** REGISTER_SEARCH */
 	public static final String REGISTER_SEARCH = "/search";
 
+	/** REGISTER_DETAIL */
+	public static final String REGISTER_DETAIL = "/{slug}";
+
+	/** REGISTER_NEW */
+	public static final String REGISTER_NEW = "/new";
+
+	/** REGISTER_CREATE */
+	public static final String REGISTER_CREATE = "/create";
+
+	/** REGISTER_EDIT */
+	public static final String REGISTER_EDIT = "/edit/{slug}";
+
+	/** REGISTER_UPDATE */
+	public static final String REGISTER_UPDATE = "/update/{slug}";
+
+	/** REGISTER_DELETE */
+	public static final String REGISTER_DELETE = "/delete/{id}";
+	
+	/** REGISTER */
+	public static final String REGISTER_REGISTER = "/register";
+	
 
 	/** PAGE_ROOT */
 	public static final String PAGE_ROOT = "/pages";

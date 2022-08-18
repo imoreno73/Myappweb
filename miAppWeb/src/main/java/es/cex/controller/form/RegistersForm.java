@@ -25,7 +25,7 @@ public class RegistersForm extends ErrorForm {
 	private String delegationorigin;
 	@Override
 	public String toString() {
-		return "DelegacionesForm [id=" + id + ", opendate=" + opendate + ", country=" + country + ", delegationorigin="
+		return "RegistersForm [id=" + id + ", opendate=" + opendate + ", country=" + country + ", delegationorigin="
 				+ delegationorigin + ", delegationdestiny=" + delegationdestiny + ", namedelegation=" + namedelegation
 				+ ", adress=" + delegationadress + ", city=" + city + ", cp=" + cp + ", province=" + province + ", dni=" + dni
 				+ ", geolat=" + geolat + ", geolong=" + geolong + ", time_open=" + time_open + ", time_closed="

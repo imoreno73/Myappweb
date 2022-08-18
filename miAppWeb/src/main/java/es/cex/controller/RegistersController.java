@@ -34,6 +34,7 @@ import es.cex.common.utils.CommonUtils;
 import es.cex.controller.form.DelegacionesForm;
 import es.cex.controller.form.DelegacionesSearchForm;
 import es.cex.controller.form.RegistersForm;
+import es.cex.controller.form.RegistersSearchForm;
 import es.cex.dto.DelegacionesDto;
 import es.cex.dto.DelegacionesPaginatedRequestDto;
 import es.cex.dto.PaginationDto;
@@ -70,36 +71,36 @@ public class RegistersController extends BaseController {
 	 */
 	@RequestMapping("")
 	public String search(HttpServletRequest request,
-			@ModelAttribute(Constant.DELEGACIONES_SEARCH_FORM_ATTRIBUTE_KEY) DelegacionesSearchForm formDelegacionesSearch)
+			@ModelAttribute(Constant.REGISTERS_SEARCH_FORM_ATTRIBUTE_KEY) RegistersSearchForm formRegistersSearch)
 			throws ControllerException {
 		//this.setHeadTitle(request, I18Constant.I18_VIEW_DELEGACIONES_HEAD_TITLE);
 		request.setAttribute(Constant.CEX_MENU_KEY, this.getMenu());
 
-		return ViewsConstant.VIEW_REGISTER_REGISTER;
+		return ViewsConstant.VIEW_REGISTER_SEARCH_PAGE;
 		
 	}
 	
 
 	     
-	    @GetMapping("")
-	    public String showForm(Model model) {
-	        RegistersForm registersform = new RegistersForm();
-	        model.addAttribute("user", registersform);
-	         
-	        List<String> listDelegacion = Arrays.asList("opendate", "country", "delegationorigin", "delegationdestiny", "namedelegation", "delegationadress",
-	        	"city", "cp", "province", "dni", "time_open", "time_closed", "geolat", "geolong", "forward", "pickup", "highuser", "highdrivers", 
-	        	"highusersgp", "highusersupervisorsgp", "highroutessgp", "cptomigrate", "routestomigrate", "clientstomigrate", "equivalence");
-	        model.addAttribute("listDelegacion", listDelegacion);
-	         
-	        return "layout-submit";
-	    }
-	    	       
-	    @PostMapping("")
-	    public String submitForm(@ModelAttribute("registersform") RegistersForm registersform) {
-	        System.out.println(registersform);
-	        return "layout-submit";
-	    }
-//	}
+//	    @GetMapping("")
+//	    public String showForm(Model model) {
+//	        RegistersForm registersform = new RegistersForm();
+//	        model.addAttribute("user", registersform);
+//	         
+//	        List<String> listRegister = Arrays.asList("opendate", "country", "delegationorigin", "delegationdestiny", "namedelegation", "delegationadress",
+//	        	"city", "cp", "province", "dni", "time_open", "time_closed", "geolat", "geolong", "forward", "pickup", "highuser", "highdrivers", 
+//	        	"highusersgp", "highusersupervisorsgp", "highroutessgp", "cptomigrate", "routestomigrate", "clientstomigrate", "equivalence");
+//	        model.addAttribute("listDelegacion", listRegister);
+//	         
+//	        return "layout-submit";
+//	    }
+//	    	       
+//	    @PostMapping("")
+//	    public String submitForm(@ModelAttribute("registersform") RegistersForm registersform) {
+//	        System.out.println(registersform);
+//	        return "layout-submit";
+//	    }
+	
 }
 
 

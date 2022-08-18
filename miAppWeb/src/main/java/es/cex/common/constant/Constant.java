@@ -178,6 +178,36 @@ public final class Constant {
 	/** DELEGACIONES_FORM_URL_ATTRIBUTE_KEY **/
 	public static final String DELEGACIONES_FORM_URL_ATTRIBUTE_KEY = "formDelegacionesUrl";
 	
+
+	
+	/** ROLE_REGISTER_ID_VARIABLE_KEY **/
+	public static final String ROLE_REGISTERS_ID_VARIABLE_KEY = "registersId";
+	
+	/** REGISTER_LIST_ATTRIBUTE_KEY **/
+	public static final String REGISTERS_LIST_ATTRIBUTE_KEY = "registers";
+
+	/** REGISTER_SEARCH_FORM_ATTRIBUTE_KEY **/
+	public static final String REGISTERS_SEARCH_FORM_ATTRIBUTE_KEY = "formregistersSearch";
+
+	/** REGISTER_SLUG_PATH_VARIABLE_KEY **/
+	public static final String REGISTERS_SLUG_PATH_VARIABLE_KEY = "slug";
+
+	/** REGISTER_ID_PATH_VARIABLE_KEY **/
+	public static final String REGISTERS_ID_PATH_VARIABLE_KEY = "id";
+
+	/** REGISTER_DETAIL_ATTRIBUTE_KEY **/
+	public static final String REGISTERS_DETAIL_ATTRIBUTE_KEY = "registersDetail";
+
+	/** REGISTER_FORM_ATTRIBUTE_KEY **/
+	public static final String REGISTERS_FORM_ATTRIBUTE_KEY = "formRegisters";
+
+	/** REGISTER_FORM_TITLE_ATTRIBUTE_KEY **/
+	public static final String REGISTERS_FORM_TITLE_ATTRIBUTE_KEY = "registersFormTitle";
+
+	/** REGISTER_FORM_URL_ATTRIBUTE_KEY **/
+	public static final String REGISTERS_FORM_URL_ATTRIBUTE_KEY = "formRegistersUrl";
+	
+	
 	/** DELEGACIONES_FORM_URL_REGISTER **/
 	public static final String DELEGACIONES_FORM_REGISTER = "register";
 

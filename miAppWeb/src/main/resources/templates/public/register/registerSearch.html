@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	layout:decorate="~{layout/layout-search}">
+<body>
+	<div layout:fragment="content" th:remove="tag">		
+			<div class="row">
+				<div class="col-12 border-bottom py-3 mb-4">
+					<h2 th:text="#{view.register.search.title}"></h2>
+				</div>
+				
+			<div class="overflow-y-auto">
+		
+			<div class="container-fluid px-6 px-md-11 py-10">
+		
+			<div align="center">
+			<h2 class="text-warning">Registration Succeeded!</h2>
+			<span>Fecha apertura:</span><span th:text="${DelegacionesForm.opendate.value}"></span><br/>
+			<span>Pais:</span><span th:text="${DelegacionesForm.country.value}"></span><br/>
+			<span>Delegacion origen:</span><span th:text="${DelegacionesForm.delegationorigin.value}"></span><br/>
+			<span>Delegacion destino:</span><span th:text="${DelegacionesForm.delegationdestiny.value}"></span><br/>
+			<span>Nombre delegacion:</span><span th:text="${DelegacionesForm.namedelegation.value}"></span><br/>
+			<span>Direccion:</span><span th:text="${DelegacionesForm.delegationadress.value}"></span><br/>
+			<span>Poblacion:</span><span th:text="${DelegacionesForm.city.value}"></span><br/>
+			<span>CP España/Portugal:</span><span th:text="${DelegacionesForm.cp.value}"></span><br/>
+			<span>Provincia:</span><span th:text="${DelegacionesForm.province.value}"></span><br/>
+			<span>Nif/Dni:</span><span th:text="${DelegacionesForm.dni.value}"></span><br/>
+			<span>Horario apertura:</span><span th:text="${DelegacionesForm.time_open.value}"></span><br/>
+			<span>Horario cierre:</span><span th:text="${DelegacionesForm.time_closed.value}"></span><br/>
+			<span>Latitud:</span><span th:text="${DelegacionesForm.geolat.value}"></span><br/>
+			<span>Longitud:</span><span th:text="${DelegacionesForm.geolong.value}"></span><br/>
+			<span>Reexpedir:</span><span th:text="${DelegacionesForm.forward.value}"></span><br/>
+			<span>Recoger:</span><span th:text="${DelegacionesForm.pickup.value}"></span><br/>
+			<span>Alta usuarios:</span><span th:text="${DelegacionesForm.highuser.value}"></span><br/>
+			<span>Alta conductores:</span><span th:text="${DelegacionesForm.highdrivers.value}"></span><br/>
+			<span>Alta usuarios SGP:</span><span th:text="${DelegacionesForm.highusersgp.value}"></span><br/>
+			<span>Alta usuarios supervisores SGP:</span><span th:text="${DelegacionesForm.highusersupervisorsgp.value}"></span><br/>
+			<span>Alta rutas SGP:</span><span th:text="${DelegacionesForm.highroutessgp.value}"></span><br/>
+			<span>Alta CP a migrar:</span><span th:text="${DelegacionesForm.cptomigrate.value}"></span><br/>
+			<span>Rutas a migrar SGP:</span><span th:text="${DelegacionesForm.routestomigratesgp.value}"></span><br/>
+			<span>Clientes a migrar:</span><span th:text="${DelegacionesForm.clientstomigrate.value}"></span><br/>
+			<span>Equivalencia conductores:</span><span th:text="${DelegacionesForm.equivalence.value}"></span><br/>
+			</div>
+	</div>	
+	</div>					
+	
+				
+				<div class="col-12 py-3 mb-4">					
+					<div th:replace="fragments/register/registerSearchFilter">[Search Filter]</div>
+				</div>
+				<div th:replace="fragments/register/registerSearchResult">[Search Result]</div>
+			</div>
+			
+	
+</body>
+</html>
